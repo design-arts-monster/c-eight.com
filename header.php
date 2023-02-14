@@ -44,10 +44,14 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'header-menu',
-					'menu_id'        => 'header-menu',
+					'theme_location' => 'header-menu-pc',
+					'menu_id'        => 'header-menu-pc',
 				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="contact-navigation">
+			<a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" data-desc="CONTACT"><span class="text">お問い合わせ</span></a>
+		</div><!-- /.contact-navigation -->
 	</header><!-- #masthead -->

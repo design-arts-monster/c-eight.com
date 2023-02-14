@@ -49,7 +49,8 @@ function whitebase_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'header-menu' => esc_html__( 'Header Menu', 'whitebase' ),
+			'header-menu-pc' => esc_html__( 'Header Menu PC', 'whitebase' ),
+			'header-menu-sp' => esc_html__( 'Header Menu SP', 'whitebase' ),
 		)
 	);
 
