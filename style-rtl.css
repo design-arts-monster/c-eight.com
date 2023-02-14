@@ -70,7 +70,6 @@ html {
   line-height: 1.15;
   text-size-adjust: 100%;
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 /* Sections
@@ -136,7 +135,6 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  text-decoration: underline dotted;
   text-decoration: underline dotted;
   border-bottom: none;
 }
@@ -242,7 +240,6 @@ button,
 [type='submit'] {
   appearance: button;
   appearance: button;
-  appearance: button;
 }
 
 /**
@@ -327,7 +324,6 @@ textarea {
 [type='search'] {
   appearance: textfield;
   appearance: textfield;
-  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -336,7 +332,6 @@ textarea {
  */
 [type='search']::-webkit-search-decoration {
   appearance: none;
-  appearance: none;
 }
 
 /**
@@ -344,7 +339,6 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  appearance: button;
   appearance: button;
   font: inherit;
 }
@@ -914,7 +908,6 @@ textarea {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
-  clip-path: inset(50%);
   word-wrap: normal !important;
   border: 0;
 }
@@ -928,7 +921,6 @@ textarea {
   height: auto;
   padding: 15px 23px 14px;
   clip: auto !important;
-  clip-path: none;
   clip-path: none;
   font-size: 0.875rem;
   font-weight: 700;

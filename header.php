@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			if ( is_front_page() && is_home() ) :
+			if ( is_front_page() || is_home() ) :
 				?>
 				<h1 class="site-title"><?php the_custom_logo(); ?></h1>
 				<?php
