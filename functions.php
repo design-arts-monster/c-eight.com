@@ -49,7 +49,7 @@ function whitebase_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'whitebase' ),
+			'header-menu' => esc_html__( 'Header Menu', 'whitebase' ),
 		)
 	);
 
@@ -168,6 +168,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom menu
+ */
+require get_template_directory() . '/inc/custom-menu.php';
 
 /**
  * Load Jetpack compatibility file.
