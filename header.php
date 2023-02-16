@@ -67,6 +67,9 @@
 							<?php dynamic_sidebar( 'sp-menu-contact' ); ?>
 						</div>
 					<?php endif; ?>
+					<?php get_template_part( 'template-parts/sns', null, ['class'=>'sp-menu-sns'] ); ?>
+					<label for="menu-btn-check" class="menu-close"></label>
+
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->

@@ -31,6 +31,45 @@ function whitebase_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	//SNS項目を作成
+	$wp_customize->add_section( 'mytheme_sns' , array(
+		'title' => 'SNS',
+	) );
+
+	//SNSの設定（データベースに設定を追加）
+	$wp_customize->add_setting( 'mytheme_options[sns_line]', array(
+		'type' => 'option',
+		'transport' => 'postMessage',
+	) );
+	$wp_customize->add_setting( 'mytheme_options[sns_twitter]', array(
+		'type' => 'option',
+		'transport' => 'postMessage',
+	) );
+	$wp_customize->add_setting( 'mytheme_options[sns_facebook]', array(
+		'type' => 'option',
+		'transport' => 'postMessage',
+	) );
+
+	//項目内のラベルなどの設定と、紐付け
+	$wp_customize->add_control( 'mytheme_set_sns_line', array(
+		'label' => 'LINE URL',
+		'section' => 'mytheme_sns',
+		'settings' => 'mytheme_options[sns_line]',
+		'type' => 'url',
+	) );
+	$wp_customize->add_control( 'mytheme_set_sns_twitter', array(
+		'label' => 'Twitter URL',
+		'section' => 'mytheme_sns',
+		'settings' => 'mytheme_options[sns_twitter]',
+		'type' => 'url',
+		) );
+	$wp_customize->add_control( 'mytheme_set_sns_facebook', array(
+		'label' => 'Facebook URL',
+		'section' => 'mytheme_sns',
+		'settings' => 'mytheme_options[sns_facebook]',
+		'type' => 'url',
+		) );
 }
 add_action( 'customize_register', 'whitebase_customize_register' );
 
@@ -59,3 +98,7 @@ function whitebase_customize_preview_js() {
 	wp_enqueue_script( 'whitebase-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'whitebase_customize_preview_js' );
+
+/**
+ * SNS Follow
+ */
