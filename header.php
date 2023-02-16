@@ -40,15 +40,35 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'whitebase' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'header-menu-pc',
-					'menu_id'        => 'header-menu-pc',
-				)
-			);
-			?>
+			<input type="checkbox" id="menu-btn-check">
+			<label for="menu-btn-check" class="menu-btn"><span class="icon"><span></span><span></span><span></span></span><span class="text"></span></label>
+			<div class="menu-content">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'header-menu-pc',
+							'menu_id'        => 'header-menu-pc',
+							'container_class' => 'header-menu-pc-container mq-dn-md',
+						)
+					);
+				?>
+				<div class="header-menu-sp-container mq-up-md">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'header-menu-sp',
+								'menu_id'        => 'header-menu-sp',
+								'container' => false,
+							)
+						);
+					?>
+					<?php if(is_active_sidebar( 'sp-menu-contact' )) :?>
+						<div class="menu-contact">
+							<?php dynamic_sidebar( 'sp-menu-contact' ); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
 		</nav><!-- #site-navigation -->
 
 		<div class="contact-navigation">

@@ -6,12 +6,27 @@
 
   .site-branding {
     .site-title {
-      margin-top: 20px;
-      margin-bottom: 15px;
-      margin-left: 33px;
+      margin-top: 11px;
+      margin-bottom: 10px;
+      margin-left: 10px;
 
-      img {
-        vertical-align: bottom;
+      @include mq-up(lg) {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: 33px;
+      }
+
+      a {
+        display: block;
+
+        @include mq-down(md) {
+          height: 40px;
+        }
+
+        img {
+          width: auto;
+          height: 100%;
+        }
       }
     }
   }
