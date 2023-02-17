@@ -10,6 +10,11 @@
  */
 
 ?>
+<?php if(is_active_sidebar( 'footer-cta' )) :?>
+	<div class="footer-cta">
+		<?php dynamic_sidebar( 'footer-cta' ); ?>
+	</div>
+<?php endif; ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-nav">
