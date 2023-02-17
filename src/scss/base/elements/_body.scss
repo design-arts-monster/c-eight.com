@@ -3,4 +3,8 @@ body {
   margin-bottom: 0 !important;
   overflow-x: hidden;
   background: $color-background-body; // Fallback for when there is no custom background color defined.
+
+  * {
+    z-index: 1;
+  }
 }
