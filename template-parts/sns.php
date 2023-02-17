@@ -7,12 +7,12 @@
 $options = get_option('mytheme_options');
 ?>
 
+<?php if($options['sns_line'] || $options['sns_twitter'] || $options['sns_facebook']): ?>
 <article class="sns <?php !isset($args['class']) ? '' : print esc_html_e($args['class'], 'whitebase'); ?>">
 	<?php if(!$args['hidden_folow']): ?>
 		<p class="follow">FOLLOW</p>
 	<?php endif; ?>
 
-	<?php if($options['sns_line'] || $options['sns_twitter'] || $options['sns_fb']): ?>
 		<div class="sns-links">
 			<?php if($options['sns_line']): ?>
 				<div class="sns-link line">
@@ -36,6 +36,6 @@ $options = get_option('mytheme_options');
 				</div>
 			<?php endif; ?>
 		</div>
-	<?php endif; ?>
-</article>
+	</article>
+<?php endif; ?>
 <!-- /.sns -->
