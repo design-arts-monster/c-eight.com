@@ -51,6 +51,7 @@ function whitebase_setup() {
 		array(
 			'header-menu-pc' => esc_html__( 'Header Menu PC', 'whitebase' ),
 			'header-menu-sp' => esc_html__( 'Header Menu SP', 'whitebase' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'whitebase' ),
 		)
 	);
 

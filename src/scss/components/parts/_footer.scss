@@ -1,0 +1,114 @@
+.site-footer {
+  padding-top: 110px;
+  padding-bottom: 20px;
+  background-color: $color-text-main;
+
+  @include mq-up(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px 60px;
+
+    &::after {
+      order: 3;
+      width: 200px;
+      content: '';
+    }
+  }
+
+  .site-nav {
+    margin: auto;
+    text-align: center;
+
+    @include mq-up(md) {
+      order: 2;
+    }
+
+    .footer-menu-container {
+      .menu {
+        padding: 0;
+        margin: 0 0 50px;
+
+        @include mq-up(md) {
+          display: inline-flex;
+          column-gap: 2rem;
+          align-items: center;
+          margin: 0;
+        }
+
+        .menu-item {
+          &:not(:first-child) {
+            margin-top: 2em;
+
+            @include mq-up(md) {
+              margin-top: 0;
+            }
+          }
+
+          a {
+            font-size: 1rem;
+            color: $color-white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .sns {
+      margin-top: 50px;
+      text-align: center;
+
+      @include mq-up(md) {
+        display: inline-flex;
+        column-gap: 1.875rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2em;
+      }
+
+      .follow {
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        color: $color-text-sub;
+
+        @include mq-up(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .sns-links {
+        display: inline-flex;
+        column-gap: 1.875rem;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+      }
+    }
+  }
+
+  .site-info {
+    margin-top: 100px;
+    text-align: center;
+
+    @include mq-up(md) {
+      order: 1;
+      width: 200px;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    p {
+      margin: 0 auto;
+    }
+
+    .copy {
+      margin-top: 0.75em;
+      font-size: 0.75rem;
+      color: $color-text-sub;
+
+      @include mq-up(md) {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}
