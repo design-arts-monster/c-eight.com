@@ -85,3 +85,35 @@ register_block_style(
         'style_handle' => 'custom-block-style',
     )
 );
+register_block_style(
+    'core/table',
+    array(
+        'name'         => 'information',
+        'label'        => '情報',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/table',
+    array(
+        'name'         => 'schedule',
+        'label'        => 'スケジュール',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'flexible-table-block/table',
+    array(
+        'name'         => 'information',
+        'label'        => '情報',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'flexible-table-block/table',
+    array(
+        'name'         => 'schedule',
+        'label'        => 'スケジュール',
+        'style_handle' => 'custom-block-style',
+    )
+);
