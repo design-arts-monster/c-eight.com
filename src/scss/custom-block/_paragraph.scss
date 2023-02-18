@@ -1,0 +1,35 @@
+p {
+  // 平行四辺形
+  &.is-style-parallelogram {
+    position: relative;
+    display: inline-block;
+    padding: 0.2em 0.8em;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    @each $key, $value in $colors {
+      &.has-#{$key}-background-color::after {
+        background-color: $value;
+      }
+    }
+
+    @each $key, $value in $gradients {
+      &.has-#{$key}-gradient-background::after {
+        background: $value;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: auto;
+      content: '';
+      background-color: map.get($colors, 'main-light');
+      transform: skewX(-15deg);
+    }
+  }
+}
