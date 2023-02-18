@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.is-style-line-left,
+  &.is-style-line-right {
+    position: relative;
+    display: inline-block;
+
+    @each $key, $value in $colors {
+      &.has-#{$key}-color {
+        &::after {
+          background-color: $value;
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background-color: map.get($colors, 'text-main');
+    }
+  }
+
+  &.is-style-line-left {
+    &::after {
+      left: calc(-10px - 100vw);
+    }
+  }
+
+  &.is-style-line-right {
+    &::after {
+      right: calc(-10px - 100vw);
+    }
+  }
+}

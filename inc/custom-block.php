@@ -53,3 +53,19 @@ register_block_style(
         'style_handle' => 'custom-block-style',
     )
 );
+register_block_style(
+    'core/heading',
+    array(
+        'name'         => 'line-right',
+        'label'        => '右線',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/heading',
+    array(
+        'name'         => 'line-left',
+        'label'        => '左線',
+        'style_handle' => 'custom-block-style',
+    )
+);
