@@ -1,5 +1,5 @@
 // 平行四辺形基本形
-%parallelogram {
+%parallelogram-button {
   background-color: map.get($colors, 'main-light');
   transform: skewX(-15deg);
 
@@ -19,7 +19,7 @@
     }
   }
 
-  .wp-element-button {
+  > .wp-element-button {
     display: inline-flex;
     column-gap: 1.5em;
     align-items: center;
@@ -59,12 +59,12 @@
 .wp-block-button {
   // 平行四辺形
   &.is-style-parallelogram {
-    @extend %parallelogram;
+    @extend %parallelogram-button;
   }
 
   // 平行四辺形輪郭
   &.is-style-parallelogram-line {
-    @extend %parallelogram;
+    @extend %parallelogram-button;
 
     background-color: map.get($colors, 'white');
     border: 1px solid map.get($colors, 'main-light');
@@ -78,7 +78,7 @@
       }
     }
 
-    .wp-element-button {
+    > .wp-element-button {
       color: map.get($colors, 'main-light');
 
       &::after {
