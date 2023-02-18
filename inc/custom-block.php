@@ -77,3 +77,11 @@ register_block_style(
         'style_handle' => 'custom-block-style',
     )
 );
+register_block_style(
+    'core/list',
+    array(
+        'name'         => 'under_line-right',
+        'label'        => '右下線',
+        'style_handle' => 'custom-block-style',
+    )
+);

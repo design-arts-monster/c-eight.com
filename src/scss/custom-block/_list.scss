@@ -1,0 +1,38 @@
+ul,
+ol {
+  &.is-style-under_line-right {
+    overflow-x: hidden;
+
+    > li {
+      position: relative;
+      padding-top: 40px;
+      margin-top: 40px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100vw;
+        height: 1px;
+        content: '';
+        background-color: map.get($colors, 'main');
+      }
+
+      &:last-child {
+        padding-bottom: 40px;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100vw;
+          height: 1px;
+          content: '';
+          background-color: map.get($colors, 'main');
+        }
+      }
+    }
+  }
+}
