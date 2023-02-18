@@ -1,7 +1,7 @@
 .site-footer {
   padding-top: 110px;
   padding-bottom: 20px;
-  background-color: $color-text-main;
+  background-color: map.get($colors, 'text-main');
 
   @include mq-up(md) {
     display: flex;
@@ -47,7 +47,7 @@
 
           a {
             font-size: 1rem;
-            color: $color-white;
+            color: map.get($colors, 'white');
             text-decoration: none;
           }
         }
@@ -69,7 +69,7 @@
       .follow {
         margin-bottom: 1rem;
         font-size: 0.75rem;
-        color: $color-text-sub;
+        color: map.get($colors, 'text-sub');
 
         @include mq-up(md) {
           font-size: 1rem;
@@ -104,7 +104,7 @@
     .copy {
       margin-top: 0.75em;
       font-size: 0.75rem;
-      color: $color-text-sub;
+      color: map.get($colors, 'text-sub');
 
       @include mq-up(md) {
         margin-top: 1.5em;

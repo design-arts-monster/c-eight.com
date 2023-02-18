@@ -35,6 +35,8 @@ Text Domain: c-eight
 	- Alignments
 
 -------------------------------------------------------------- */
+// use map.get.
+@use 'sass:map';
 
 // Import variables and mixins.
 @import 'abstracts/abstracts';
@@ -51,13 +53,17 @@ Text Domain: c-eight
 --------------------------------------------- */
 @import 'generic/box-sizing';
 
-/* responsive
+/* Responsive
 --------------------------------------------- */
 @import 'generic/responsive';
 
-/* container
+/* Container
 --------------------------------------------- */
 @import 'generic/container';
+
+/* Color Palette
+--------------------------------------------- */
+@import 'generic/color-palette';
 
 /* --------------------------------------------------------------
 # Base

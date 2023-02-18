@@ -26,7 +26,7 @@
     }
 
     a {
-      color: $color-text-main;
+      color: map.get($colors, 'text-main');
       text-decoration: none;
     }
   }

@@ -2,7 +2,7 @@ body {
   width: 100%;
   margin-bottom: 0 !important;
   overflow-x: hidden;
-  background: $color-background-body; // Fallback for when there is no custom background color defined.
+  background: map.get($colors, 'background-body'); // Fallback for when there is no custom background color defined.
 
   * {
     z-index: 1;

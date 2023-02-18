@@ -13,13 +13,13 @@
 // Responsive
 // 参考：https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html
 @mixin mq-up($breakpoint: md) {
-  @media #{map-get($breakpoint-up, $breakpoint)} {
+  @media #{map.get($breakpoint-up, $breakpoint)} {
     @content;
   }
 }
 
 @mixin mq-down($breakpoint: md) {
-  @media #{map-get($breakpoint-down, $breakpoint)} {
+  @media #{map.get($breakpoint-down, $breakpoint)} {
     @content;
   }
 }
@@ -31,6 +31,29 @@
       #{$class}-#{$suffix} {
         @content;
       }
+    }
+  }
+}
+
+// WordPressカラーパレット対応
+@mixin has-colors($colors) {
+  @each $key, $value in $colors {
+    .has-#{$key}-background-color {
+      background-color: $value;
+    }
+    .has-#{$key}-color {
+      color: $value;
+    }
+    .has-#{$key}-border-color {
+      color: $value;
+    }
+  }
+}
+
+@mixin has-gradient($gradients) {
+  @each $key, $value in $gradients {
+    .has-#{$key}-gradient-background {
+      background: $value;
     }
   }
 }
