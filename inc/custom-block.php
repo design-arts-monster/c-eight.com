@@ -21,3 +21,35 @@ register_block_style(
         'style_handle' => 'custom-block-style',
     )
 );
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'parallelogram-right-fit-right',
+        'label'        => '平行四辺形右-右寄せ',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'parallelogram-left-fit-right',
+        'label'        => '平行四辺形左-右寄せ',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'parallelogram-right-fit-left',
+        'label'        => '平行四辺形右-左寄せ',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/group',
+    array(
+        'name'         => 'parallelogram-left-fit-left',
+        'label'        => '平行四辺形左-左寄せ',
+        'style_handle' => 'custom-block-style',
+    )
+);

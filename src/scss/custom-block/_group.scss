@@ -1,0 +1,103 @@
+// 平行四辺形基本形
+%parallelogram-group {
+  padding: 20px 0;
+  overflow-x: hidden;
+  background-color: transparent !important;
+  background-image: none !important;
+
+  // 子要素を斜めにすると文字も斜めになるため親要素の背景に色をつける
+  @each $key, $value in $colors {
+    &.has-#{$key}-background-color {
+      > .wp-block-group__inner-container::before {
+        background-color: $value;
+      }
+    }
+    &.has-#{$key}-border-color {
+      > .wp-block-group__inner-container::before {
+        border-color: $value;
+      }
+    }
+  }
+
+  @each $key, $value in $gradients {
+    &.has-#{$key}-gradient-background {
+      > .wp-block-group__inner-container::before {
+        background: $value;
+      }
+    }
+  }
+
+  > .wp-block-group__inner-container {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      display: block;
+      width: 100%;
+      content: '';
+      background-color: map.get($colors, 'main');
+      box-shadow: 0 3px 20px #00000029;
+    }
+  }
+}
+
+.wp-block-group {
+  // 平行四辺形
+  &.is-style-parallelogram-right-fit-right {
+    @extend %parallelogram-group;
+
+    > .wp-block-group__inner-container {
+      &::before {
+        left: -5%;
+        padding-right: calc(100vw + 10%);
+        transform: skewX(-15deg);
+      }
+    }
+  }
+
+  &.is-style-parallelogram-left-fit-right {
+    @extend %parallelogram-group;
+
+    > .wp-block-group__inner-container {
+      &::before {
+        left: -5%;
+        padding-right: calc(100vw + 10%);
+        transform: skewX(15deg);
+      }
+    }
+  }
+
+  &.is-style-parallelogram-right-fit-left {
+    @extend %parallelogram-group;
+
+    > .wp-block-group__inner-container {
+      &::before {
+        right: -5%;
+        padding-left: calc(100vw + 10%);
+        transform: skewX(-15deg);
+      }
+    }
+  }
+
+  &.is-style-parallelogram-left-fit-left {
+    @extend %parallelogram-group;
+
+    > .wp-block-group__inner-container {
+      &::before {
+        right: -5%;
+        padding-left: calc(100vw + 10%);
+        transform: skewX(15deg);
+      }
+    }
+  }
+}
