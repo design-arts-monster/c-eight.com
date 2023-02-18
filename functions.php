@@ -184,9 +184,19 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Color Palette
+ */
+require get_template_directory() . '/inc/color-palette.php';
+
+/**
  * Custom menu
  */
 require get_template_directory() . '/inc/custom-menu.php';
+
+/**
+ * Custom block
+ */
+require get_template_directory() . '/inc/custom-block.php';
 
 /**
  * Load Jetpack compatibility file.
