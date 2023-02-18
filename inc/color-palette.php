@@ -39,12 +39,12 @@ function editor_color_palette() {
 		),
 		array(
 				'name'  => '灰',
-				'slug'  => 'red',
+				'slug'  => 'gray',
 				'color' => '#adadad',
 		),
 		array(
 				'name'  => '薄灰',
-				'slug'  => 'red',
+				'slug'  => 'gray-light',
 				'color' => '#f7f7f7',
 		),
 	) );
