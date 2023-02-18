@@ -1,0 +1,89 @@
+// 平行四辺形基本形
+%parallelogram {
+  background-color: map.get($colors, 'main-light');
+  transform: skewX(-15deg);
+
+  // 子要素を斜めにすると文字も斜めになるため親要素の背景に色をつける
+  @each $key, $value in $colors {
+    &:has(> .has-#{$key}-background-color) {
+      background-color: $value;
+    }
+    &:has(> .has-#{$key}-border-color) {
+      color: $value;
+    }
+  }
+
+  @each $key, $value in $gradients {
+    &:has(> .has-#{$key}-gradient-background) {
+      background: $value;
+    }
+  }
+
+  .wp-element-button {
+    display: inline-flex;
+    column-gap: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2em 1.6em;
+    color: map.get($colors, 'white');
+    background-color: transparent !important;
+    background-image: none !important;
+    border-radius: 0;
+    transform: skewX(15deg);
+
+    @each $key, $value in $colors {
+      &.has-#{$key}-color {
+        &::after {
+          background-color: $value;
+        }
+      }
+    }
+
+    &::before,
+    &::after {
+      display: inline-block;
+      content: '';
+    }
+
+    &::after {
+      width: 1.45em;
+      height: 0.37em;
+      background-color: map.get($colors, 'white');
+      mask-image: url('./img/icon/arrow/arrow-line-right.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+    }
+  }
+}
+
+.wp-block-button {
+  // 平行四辺形
+  &.is-style-parallelogram {
+    @extend %parallelogram;
+  }
+
+  // 平行四辺形輪郭
+  &.is-style-parallelogram-line {
+    @extend %parallelogram;
+
+    background-color: map.get($colors, 'white');
+    border: 1px solid map.get($colors, 'main-light');
+
+    @each $key, $value in $colors {
+      &:has(> .has-#{$key}-color) {
+        border-color: $value;
+      }
+      &:has(> .has-#{$key}-border-color) {
+        border-color: $value;
+      }
+    }
+
+    .wp-element-button {
+      color: map.get($colors, 'main-light');
+
+      &::after {
+        background-color: map.get($colors, 'main-light');
+      }
+    }
+  }
+}

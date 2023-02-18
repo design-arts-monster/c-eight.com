@@ -1,0 +1,13 @@
+/**
+ * カスタムブロック用スタイル
+*/
+// use map.get.
+@use 'sass:map';
+
+// Import variables and mixins.
+@import 'abstracts/abstracts';
+
+/* --------------------------------------------------------------
+# Custom Block
+-------------------------------------------------------------- */
+@import 'custom-block/button';
