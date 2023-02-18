@@ -1,7 +1,7 @@
 // webfont
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 // stylelint-disable value-keyword-case
-$font-main: 'Noto Sans JP', Roboto, 'Helvetica Neue', sans-serif;
+$font-main: Roboto, 'Noto Sans JP', 'Helvetica Neue', sans-serif;
 // stylelint-enable value-keyword-case
 $font-code: monaco, consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 $font-pre: 'Courier 10 Pitch', courier, monospace;
