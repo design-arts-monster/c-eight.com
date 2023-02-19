@@ -80,6 +80,7 @@
     }
 
     > .wp-element-button {
+      padding: calc(1.2em - 2px) calc(1.5em - 2px);
       color: map.get($colors, 'main-light');
 
       &::after {
@@ -90,5 +91,9 @@
 
   &.is-style-parallelogram-line-bold {
     border-width: 4px;
+
+    > .wp-element-button {
+      padding: calc(1.2em - 8px) calc(1.5em - 8px);
+    }
   }
 }
