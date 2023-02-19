@@ -41,14 +41,17 @@ function whitebase_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'mytheme_options[sns_line]', array(
 		'type' => 'option',
 		'transport' => 'postMessage',
+		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_setting( 'mytheme_options[sns_twitter]', array(
 		'type' => 'option',
 		'transport' => 'postMessage',
+		'sanitize_callback' => 'esc_url_raw'
 	) );
 	$wp_customize->add_setting( 'mytheme_options[sns_facebook]', array(
 		'type' => 'option',
 		'transport' => 'postMessage',
+		'sanitize_callback' => 'esc_url_raw'
 	) );
 
 	//項目内のラベルなどの設定と、紐付け
@@ -95,7 +98,7 @@ function whitebase_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function whitebase_customize_preview_js() {
-	wp_enqueue_script( 'whitebase-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'whitebase-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _C_EIGHT_VERSION, true );
 }
 add_action( 'customize_preview_init', 'whitebase_customize_preview_js' );
 
