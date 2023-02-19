@@ -22,6 +22,14 @@ register_block_style(
     )
 );
 register_block_style(
+    'core/button',
+    array(
+        'name'         => 'parallelogram-line-bold',
+        'label'        => '平行四辺形輪郭太',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
     'core/group',
     array(
         'name'         => 'parallelogram-right-fit-right',
