@@ -80,7 +80,7 @@
     }
 
     > .wp-element-button {
-      padding: calc(1.2em - 2px) calc(1.5em - 2px);
+      padding: calc(1.2em - 1px) calc(1.5em - 1px);
       color: map.get($colors, 'main-light');
 
       &::after {
@@ -93,7 +93,7 @@
     border-width: 4px;
 
     > .wp-element-button {
-      padding: calc(1.2em - 8px) calc(1.5em - 8px);
+      padding: calc(1.2em - 4px) calc(1.5em - 4px);
     }
   }
 }
