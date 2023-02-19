@@ -86,6 +86,22 @@ register_block_style(
     )
 );
 register_block_style(
+    'core/gallery',
+    array(
+        'name'         => 'infinity-scroll-right',
+        'label'        => '無限スクロール右',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/gallery',
+    array(
+        'name'         => 'infinity-scroll-left',
+        'label'        => '無限スクロール左',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
     'core/table',
     array(
         'name'         => 'information',

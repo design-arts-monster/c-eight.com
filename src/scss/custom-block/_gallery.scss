@@ -1,0 +1,14 @@
+// 無限スクロール
+.wp-block-gallery {
+  &.is-style-infinity-scroll-right,
+  &.is-style-infinity-scroll-left {
+    display: block;
+    gap: 0 !important;
+    width: 100%;
+    margin: 0;
+
+    .wp-block-image {
+      width: auto;
+    }
+  }
+}
