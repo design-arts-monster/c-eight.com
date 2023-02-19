@@ -10,7 +10,7 @@
  */
 
 ?>
-<?php get_template_part( 'template-parts/sns', null, ['class'=>'follow-sns mq-dn-md', 'hidden_folow'=>true] ); ?>
+<?php get_template_part( 'template-parts/sns', null, ['class'=>'follow-sns mq-dn-dowm-md', 'hidden_folow'=>true] ); ?>
 
 <?php if(is_active_sidebar( 'footer-cta' )) :?>
 	<div class="footer-cta">

@@ -139,3 +139,100 @@
     }
   }
 }
+
+.footer-cta {
+  > .widget_block {
+    margin-bottom: 0;
+
+    .wp-block-cover {
+      position: relative;
+      padding: 0;
+
+      .wp-block-cover__inner-container {
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        .title {
+          margin-top: calc(-1em - 80px);
+          margin-bottom: 0;
+          font-size: 4.5rem;
+          line-height: 1;
+
+          @include mq-up(md) {
+            font-size: 10.8rem;
+          }
+        }
+
+        .container {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          @each $key, $value in $colors {
+            &.has-#{$key}-background-color {
+              background-color: transparent !important;
+
+              .wp-block-group__inner-container {
+                background-color: $value;
+              }
+            }
+          }
+
+          .wp-block-group__inner-container {
+            padding: 80px;
+            margin-bottom: 90px;
+            box-shadow: 0 5px 20px #00000029;
+
+            @include mq-down(md) {
+              padding: 40px 20px;
+            }
+
+            .phone {
+              margin-top: 10px;
+              margin-bottom: 10px;
+              line-height: 1;
+
+              @include mq-down(md) {
+                font-size: 2.625rem !important;
+              }
+
+              + p {
+                margin-bottom: 40px;
+              }
+            }
+
+            .wp-block-columns {
+              .wp-block-column {
+                > p {
+                  &.subject {
+                    margin-bottom: 15px;
+                    font-size: 1.43rem !important;
+                  }
+
+                  @include mq-down(md) {
+                    font-size: 0.875rem !important;
+
+                    &.subject {
+                      font-size: 1.3125rem !important;
+                    }
+                  }
+                }
+
+                .wp-block-button {
+                  margin-top: 30px;
+                  font-size: 1.3125rem !important;
+
+                  @include mq-down(md) {
+                    margin-top: 20px;
+                    font-size: 1rem !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
