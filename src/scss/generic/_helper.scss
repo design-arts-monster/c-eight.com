@@ -2,54 +2,54 @@
 @for $i from -100 through 100 {
   // margin
   .m-t-#{$i} {
-    margin-top: '#{$i}px' !important;
+    margin-top: #{$i}px !important;
   }
   .m-l-#{$i} {
-    margin-left: '#{$i}px' !important;
+    margin-left: #{$i}px !important;
   }
   .m-r-#{$i} {
-    margin-right: '#{$i}px' !important;
+    margin-right: #{$i}px !important;
   }
   .m-b-#{$i} {
-    margin-bottom: '#{$i}px' !important;
+    margin-bottom: #{$i}px !important;
   }
   .m-t-#{$i}p {
-    margin-top: '#{$i}%' !important;
+    margin-top: #{$i}\% !important;
   }
   .m-l-#{$i}p {
-    margin-left: '#{$i}%' !important;
+    margin-left: #{$i}\% !important;
   }
   .m-r-#{$i}p {
-    margin-right: '#{$i}%' !important;
+    margin-right: #{$i}\% !important;
   }
   .m-b-#{$i}p {
-    margin-bottom: '#{$i}%' !important;
+    margin-bottom: #{$i}\% !important;
   }
 
   // padding
   .p-t-#{$i} {
-    padding-top: '#{$i}px' !important;
+    padding-top: #{$i}px !important;
   }
   .p-l-#{$i} {
-    padding-left: '#{$i}px' !important;
+    padding-left: #{$i}px !important;
   }
   .p-r-#{$i} {
-    padding-right: '#{$i}px' !important;
+    padding-right: #{$i}px !important;
   }
   .p-b-#{$i} {
-    padding-bottom: '#{$i}px' !important;
+    padding-bottom: #{$i}px !important;
   }
   .p-t-#{$i}p {
-    padding-top: '#{$i}%' !important;
+    padding-top: #{$i}\% !important;
   }
   .p-l-#{$i}p {
-    padding-left: '#{$i}%' !important;
+    padding-left: #{$i}\% !important;
   }
   .p-r-#{$i}p {
-    padding-right: '#{$i}%' !important;
+    padding-right: #{$i}\% !important;
   }
   .p-b-#{$i}p {
-    padding-bottom: '#{$i}%' !important;
+    padding-bottom: #{$i}\% !important;
   }
 
   // z-index
@@ -59,28 +59,48 @@
 
   // position
   .t-#{$i} {
-    top: '#{$i}px' !important;
+    top: #{$i}px !important;
   }
   .l-#{$i} {
-    left: '#{$i}px' !important;
+    left: #{$i}px !important;
   }
   .r-#{$i} {
-    right: '#{$i}px' !important;
+    right: #{$i}px !important;
   }
   .b-#{$i} {
-    bottom: '#{$i}px' !important;
+    bottom: #{$i}px !important;
   }
   .t-#{$i}p {
-    top: '#{$i}%' !important;
+    top: #{$i}\% !important;
   }
   .l-#{$i}p {
-    left: '#{$i}%' !important;
+    left: #{$i}\% !important;
   }
   .r-#{$i}p {
-    right: '#{$i}%' !important;
+    right: #{$i}\% !important;
   }
   .b-#{$i}p {
-    bottom: '#{$i}%' !important;
+    bottom: #{$i}\% !important;
+  }
+
+  // transform
+  .trf-tx-#{$i} {
+    transform: translateX(#{$i}px) !important;
+  }
+  .trf-ty-#{$i} {
+    transform: translateY(#{$i}px) !important;
+  }
+  .trf-tz-#{$i} {
+    transform: translateZ(#{$i}px) !important;
+  }
+  .trf-tx-#{$i}p {
+    transform: translateX(#{$i}\%) !important;
+  }
+  .trf-ty-#{$i}p {
+    transform: translateY(#{$i}\%) !important;
+  }
+  .trf-tz-#{$i}p {
+    transform: translateZ(#{$i}\%) !important;
   }
 }
 
