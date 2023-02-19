@@ -1,0 +1,95 @@
+/* 微調整用ヘルパークラス */
+@for $i from -100 through 100 {
+  // margin
+  .m-t-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .m-l-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .m-r-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .m-b-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+
+  // padding
+  .p-t-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .p-l-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .p-r-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .p-b-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+
+  // z-index
+  .z-#{$i} {
+    z-index: #{$i};
+  }
+
+  // position
+  .t-#{$i} {
+    top: #{$i}px;
+  }
+  .l-#{$i} {
+    left: #{$i}px;
+  }
+  .r-#{$i} {
+    right: #{$i}px;
+  }
+  .b-#{$i} {
+    bottom: #{$i}px;
+  }
+}
+
+// position
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-f {
+  position: fixed;
+}
+
+.pos-s {
+  position: static;
+}
+
+.pos-sticky {
+  position: sticky;
+}
+
+// overflow
+.ov-h {
+  overflow: hidden;
+}
+
+.ovx-h {
+  overflow-x: hidden;
+}
+
+.ovy-h {
+  overflow-y: hidden;
+}
+
+.ov-a {
+  overflow: auto;
+}
+
+.ovx-a {
+  overflow-x: auto;
+}
+
+.ovy-a {
+  overflow-y: auto;
+}
