@@ -10,13 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php if(!(is_front_page() || is_home())): ?>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	<?php whitebase_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content<?php echo (!(is_front_page() || is_home()))?'':' m-t-0'; ?>">
 		<?php
 		the_content();
 
