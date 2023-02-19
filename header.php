@@ -75,7 +75,7 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="contact-navigation">
-			<a href="#footer-cta" data-desc="CONTACT"><span class="text">test</span></a>
+			<a href="#footer-cta" data-desc="CONTACT"><span class="text">お問い合わせ</span></a>
 		</div><!-- /.contact-navigation -->
 	</header><!-- #masthead -->
 
