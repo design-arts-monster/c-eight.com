@@ -18,6 +18,6 @@
   "scss.validate": false,
   "vetur.validation.style": false,
   "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   }
 }
