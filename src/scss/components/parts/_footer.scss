@@ -132,6 +132,12 @@
         background-color: rgb(255 255 255 / 60%);
         border-radius: 999px;
 
+        @media (hover: hover) {
+          &:hover {
+            background-color: map.get($colors, 'main');
+          }
+        }
+
         img {
           vertical-align: bottom;
         }

@@ -6,7 +6,6 @@
 
   @include mq-up(md) {
     display: inline-flex;
-    align-items: center;
     width: auto;
   }
 
@@ -41,6 +40,7 @@
               align-items: baseline;
               justify-content: flex-start;
               font-size: 0.75rem;
+              color: map.get($colors, 'white');
               text-decoration: none;
 
               &::before {
@@ -159,19 +159,34 @@
     }
   }
 
-  .menu-item {
-    a {
-      display: block;
-      font-size: 0.75rem;
-      color: map.get($colors, 'white');
-      text-align: center;
-      text-decoration: none;
+  .header-menu-pc-container {
+    height: 100%;
 
-      &::before {
-        display: block;
-        font-size: 1.375rem;
-        font-weight: 700;
-        content: attr(data-desc);
+    .menu-item {
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding-right: 0.75em;
+        padding-left: 0.75em;
+        font-size: 0.75rem;
+        color: map.get($colors, 'white');
+        text-align: center;
+        text-decoration: none;
+
+        &::before {
+          display: block;
+          font-size: 1.375rem;
+          font-weight: 700;
+          content: attr(data-desc);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: map.get($colors, 'text-main');
+          }
+        }
       }
     }
   }
@@ -196,6 +211,13 @@
     color: map.get($colors, 'text-main');
     text-decoration: none;
     background-color: map.get($colors, 'yellow');
+
+    @media (hover: hover) {
+      &:hover {
+        color: map.get($colors, 'white');
+        background-color: map.get($colors, 'text-main');
+      }
+    }
 
     @include mq-up(lg) {
       padding-right: calc(3.385vw + 20px);
@@ -330,13 +352,18 @@
 
   .main-navigation ul {
     display: flex;
-    column-gap: 1.5vw;
+    height: 100%;
   }
 }
 
 @include mq-up(lg) {
-  .main-navigation ul {
-    column-gap: 3.75vw;
+  .main-navigation {
+    .header-menu-pc-container {
+      .menu-item a {
+        padding-right: 1.875em;
+        padding-left: 1.875em;
+      }
+    }
   }
 }
 
