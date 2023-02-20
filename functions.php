@@ -20,8 +20,7 @@ if (!defined('_C_EIGHT_VERSION')) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function whitebase_setup()
-{
+function whitebase_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
@@ -113,8 +112,7 @@ add_action('after_setup_theme', 'whitebase_setup');
  *
  * @global int $content_width
  */
-function whitebase_content_width()
-{
+function whitebase_content_width() {
 	$GLOBALS['content_width'] = apply_filters('whitebase_content_width', 640);
 }
 add_action('after_setup_theme', 'whitebase_content_width', 0);
@@ -124,8 +122,7 @@ add_action('after_setup_theme', 'whitebase_content_width', 0);
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function whitebase_widgets_footer_cta()
-{
+function whitebase_widgets_footer_cta() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__('Footer CTA', 'whitebase'),
@@ -138,8 +135,7 @@ function whitebase_widgets_footer_cta()
 	);
 }
 add_action('widgets_init', 'whitebase_widgets_footer_cta');
-function whitebase_widgets_sp_menu_contact()
-{
+function whitebase_widgets_sp_menu_contact() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__('ハンバーガーメニュー CONTACT', 'whitebase'),
@@ -178,8 +174,7 @@ add_action('admin_enqueue_scripts', function ($hook_suffix) {
  * @see https://www.nxworld.net/wp-add-page-slug-body-class.html
  */
 add_filter('body_class', 'add_page_slug_class_name');
-function add_page_slug_class_name($classes)
-{
+function add_page_slug_class_name($classes) {
 	if (is_page()) {
 		$page = get_post(get_the_ID());
 		$classes[] = 'page-slug-' . $page->post_name;

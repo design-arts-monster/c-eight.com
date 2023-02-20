@@ -11,8 +11,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function whitebase_customize_register($wp_customize)
-{
+function whitebase_customize_register($wp_customize) {
 	$wp_customize->get_setting('blogname')->transport         = 'postMessage';
 	$wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
 	$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
@@ -83,8 +82,7 @@ add_action('customize_register', 'whitebase_customize_register');
  *
  * @return void
  */
-function whitebase_customize_partial_blogname()
-{
+function whitebase_customize_partial_blogname() {
 	bloginfo('name');
 }
 
@@ -93,16 +91,14 @@ function whitebase_customize_partial_blogname()
  *
  * @return void
  */
-function whitebase_customize_partial_blogdescription()
-{
+function whitebase_customize_partial_blogdescription() {
 	bloginfo('description');
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function whitebase_customize_preview_js()
-{
+function whitebase_customize_preview_js() {
 	wp_enqueue_script('whitebase-customizer', get_template_directory_uri() . '/js/customizer.js', array('customize-preview'), _C_EIGHT_VERSION, true);
 }
 add_action('customize_preview_init', 'whitebase_customize_preview_js');

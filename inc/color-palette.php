@@ -1,7 +1,6 @@
 <?php
 /* カラーパレットに色を追加 */
-function editor_color_palette()
-{
+function editor_color_palette() {
 	add_theme_support('editor-color-palette', array(
 		array(
 			'name'  => '黒',
@@ -54,8 +53,7 @@ function editor_color_palette()
 add_action('after_setup_theme', 'editor_color_palette');
 
 /* カラーパレットにグラデーションを追加 */
-function editor_gradient_presets()
-{
+function editor_gradient_presets() {
 	add_theme_support(
 		'editor-gradient-presets',
 		array(

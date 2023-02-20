@@ -3,8 +3,7 @@
 /**
  * Enqueue scripts and styles.
  */
-function whitebase_scripts()
-{
+function whitebase_scripts() {
 	wp_enqueue_style('whitebase-style', get_stylesheet_uri(), array(), _C_EIGHT_VERSION);
 	wp_style_add_data('whitebase-style', 'rtl', 'replace');
 

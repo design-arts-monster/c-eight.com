@@ -5,7 +5,7 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	<?php the_header_image_tag(); ?>
+	<?php  the_header_image_tag(); ?>
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
@@ -17,8 +17,7 @@
  *
  * @uses whitebase_header_style()
  */
-function whitebase_custom_header_setup()
-{
+function whitebase_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
@@ -42,8 +41,7 @@ if (!function_exists('whitebase_header_style')) :
 	 *
 	 * @see whitebase_custom_header_setup().
 	 */
-	function whitebase_header_style()
-	{
+	function whitebase_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -12,8 +12,7 @@ if (!function_exists('whitebase_posted_on')) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function whitebase_posted_on()
-	{
+	function whitebase_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if (get_the_time('U') !== get_the_modified_time('U')) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -42,8 +41,7 @@ if (!function_exists('whitebase_posted_by')) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function whitebase_posted_by()
-	{
+	function whitebase_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x('by %s', 'post author', 'whitebase'),
@@ -59,8 +57,7 @@ if (!function_exists('whitebase_entry_footer')) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function whitebase_entry_footer()
-	{
+	function whitebase_entry_footer() {
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()) {
 			/* translators: used between list items, there is a space after the comma */
@@ -123,8 +120,7 @@ if (!function_exists('whitebase_post_thumbnail')) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function whitebase_post_thumbnail()
-	{
+	function whitebase_post_thumbnail() {
 		if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
 			return;
 		}
@@ -164,8 +160,7 @@ if (!function_exists('wp_body_open')) :
 	 *
 	 * @link https://core.trac.wordpress.org/ticket/12563
 	 */
-	function wp_body_open()
-	{
+	function wp_body_open() {
 		do_action('wp_body_open');
 	}
 endif;
