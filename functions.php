@@ -212,6 +212,25 @@ function get_media($size, $width = 'down') {
 }
 
 /**
+ * 投稿アーカイブの並び順を変更
+ */
+function change_posts_per_page($query) {
+
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+
+	if ($query->is_home()) {
+		$query->set('meta_key', 'date');
+		$query->set('orderby', 'meta_value');
+		$query->set('order', 'ASC');
+		$query->set('category__not_in', array(6));
+		return;
+	}
+}
+add_action('pre_get_posts', 'change_posts_per_page');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

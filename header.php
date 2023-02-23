@@ -81,7 +81,7 @@
 			</div><!-- /.contact-navigation -->
 		</header><!-- #masthead -->
 
-		<?php if (function_exists('bcn_display') && !is_home() && !is_front_page()) : ?>
+		<?php if (function_exists('bcn_display') && !is_front_page()) : ?>
 			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 				<div class="container">
 					<?php bcn_display(); ?>

@@ -1,0 +1,62 @@
+.navigation.pagination {
+  margin: 100px auto 0;
+
+  .nav-links {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    @include mq-down('md') {
+      column-gap: 10px;
+    }
+
+    .prev,
+    .next {
+      display: none;
+    }
+
+    > .page-numbers {
+      &:not(.dots) {
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 42px;
+        font-weight: 700;
+        color: map.get($colors, 'main');
+        background-color: map.get($colors, 'white');
+        border: 2px solid map.get($colors, 'main');
+        transition: 0.2s;
+
+        @include mq-down('md') {
+          padding-right: 13px;
+          padding-left: 13px;
+          font-size: 25px;
+        }
+
+        &.current {
+          color: map.get($colors, 'text-main');
+          background-color: map.get($colors, 'yellow');
+          border-color: map.get($colors, 'yellow');
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            &:not(.current) {
+              color: map.get($colors, 'white');
+              background-color: map.get($colors, 'text-main');
+              border-color: map.get($colors, 'text-main');
+            }
+          }
+        }
+      }
+
+      &.dots {
+        display: inline-block;
+        width: 50px;
+        height: 4px;
+        font-size: 0;
+        background-color: map.get($colors, 'main');
+      }
+    }
+  }
+}
