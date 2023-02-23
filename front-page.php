@@ -77,7 +77,7 @@
 
 			$the_query = new WP_Query(array(
 				'post_type' => 'post',
-				// 'category__not_in' => array(6)
+				'category__not_in' => array(6)
 			)); ?>
 			<?php if ($the_query->have_posts()) : ?>
 				<!-- pagination here -->
