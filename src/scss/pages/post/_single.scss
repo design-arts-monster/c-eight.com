@@ -1,0 +1,284 @@
+.single.single-post {
+  .site-main {
+    ~ .footer-cta {
+      .title {
+        color: map.get($colors, 'white') !important;
+        opacity: 0.15;
+      }
+    }
+  }
+
+  .entry-header {
+    position: relative;
+    margin-bottom: 60px;
+    overflow: hidden;
+
+    @include mq-down('md') {
+      margin-bottom: 40px;
+    }
+
+    .entry-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+
+      @include mq-down('md') {
+        position: relative;
+        margin-top: -20px;
+      }
+
+      .entry-title {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        max-width: 570px;
+        padding-top: 47px;
+        padding-bottom: 45px;
+        margin: 100px 0 30px;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+
+        @include mq-down('md') {
+          max-width: 86%;
+          padding-top: 32px;
+          padding-bottom: 30px;
+          margin-top: 0;
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+
+        > .text {
+          position: relative;
+          z-index: 2;
+          color: map.get($colors, 'white');
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          right: -8%;
+          bottom: 0;
+          z-index: 1;
+          display: block;
+          width: calc(100vw + 8%);
+          max-width: calc(570px + 30vw);
+          content: '';
+          background: map.get($gradients, 'yellow-orange-red');
+          transform: skewX(-15deg);
+        }
+      }
+
+      .category {
+        margin-bottom: 10px;
+
+        ul,
+        ol {
+          padding-left: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          list-style: none;
+        }
+
+        @include mq-down('md') {
+          margin-bottom: 10px;
+        }
+
+        .event-cat {
+          display: flex;
+          column-gap: 20px;
+          align-items: center;
+          justify-content: flex-start;
+
+          @include mq-down('md') {
+            column-gap: 10px;
+          }
+
+          li {
+            padding: 5px 30px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 41px;
+            color: map.get($colors, 'white');
+            background-color: map.get($colors, 'main');
+            border: 1px solid map.get($colors, 'main');
+
+            @include mq-down('md') {
+              padding: 2px 26px;
+              font-size: 14px;
+              line-height: 32px;
+            }
+
+            &.cat-reception {
+              font-size: 19px;
+
+              @include mq-down('md') {
+                padding: 2px 26px;
+                font-size: 12px;
+                line-height: 32px;
+              }
+            }
+
+            @each $key, $value in $colors {
+              &.cat-color-#{$key} {
+                background-color: $value;
+                border-color: $value;
+
+                @if $key == 'yellow' or $key == 'gray' {
+                  color: map.get($colors, 'text-main');
+                }
+
+                @if $key == 'white' {
+                  color: map.get($colors, 'main');
+                  background-color: map.get($colors, 'white');
+                  border-color: map.get($colors, 'main');
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .schedule-date {
+        font-size: 24px;
+        font-weight: 700;
+        color: map.get($colors, 'main');
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        @include mq-down('md') {
+          font-size: 18px;
+        }
+
+        .schedule {
+          margin-right: 10px;
+          margin-left: 10px;
+          font-size: 40px;
+
+          @include mq-down('md') {
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 38px;
+          }
+        }
+      }
+
+      .venue {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: map.get($colors, 'main');
+
+        @include mq-down('md') {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .entry-thumbnail {
+      display: flex;
+      justify-content: flex-end;
+
+      @include mq-down('md') {
+        justify-content: center;
+      }
+
+      .entry-thumbnail-wrap {
+        position: relative;
+        z-index: 1;
+        width: 60%;
+
+        @include mq-down('md') {
+          width: 100%;
+        }
+
+        .entry-thumbnail-inner {
+          position: relative;
+          width: 120%;
+          height: 546px;
+          overflow: hidden;
+          transform: translateX(20%) skewX(15deg);
+
+          @include mq-down('md') {
+            width: 100%;
+            height: auto;
+            transform: none;
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            vertical-align: bottom;
+            transform: translateY(-50%) skewX(-15deg);
+
+            @include mq-down('md') {
+              position: static;
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .entry-footer {
+    padding-top: 60px;
+    padding-bottom: 320px;
+    margin-top: 60px;
+    background-color: map.get($colors, 'main');
+
+    @include mq-down('md') {
+      padding-bottom: 260px;
+    }
+
+    .event-infomation,
+    .event-schedule {
+      margin-bottom: 90px;
+    }
+
+    .caption {
+      margin-bottom: 36px;
+      font-size: 21px;
+      font-weight: 400;
+      color: map.get($colors, 'white');
+
+      span {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          display: inline-block;
+          margin-right: 0.5em;
+          font-size: 78px;
+          font-style: italic;
+          font-weight: 700;
+          line-height: 1;
+          content: attr(data-desc);
+
+          @include mq-down('md') {
+            margin-right: 0.3em;
+            font-size: 41px;
+          }
+        }
+      }
+    }
+
+    .entry-buttons {
+      display: flex;
+      justify-content: center;
+
+      .wp-block-button {
+        max-width: 420px;
+        font-size: 27px;
+      }
+    }
+  }
+}
