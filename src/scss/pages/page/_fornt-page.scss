@@ -1,11 +1,5 @@
 .home.page {
   .site-main {
-    padding-bottom: 320px;
-
-    @include mq-down('md') {
-      padding-bottom: 260px;
-    }
-
     ~ .footer-cta {
       .title {
         color: #f5f5f5 !important;

@@ -1,4 +1,14 @@
-/* common
+/* footer
+--------------------------------------------- */
+.site-main {
+  padding-bottom: 320px;
+
+  @include mq-down('md') {
+    padding-bottom: 260px;
+  }
+}
+
+/* page
 --------------------------------------------- */
 .page {
   h2,
