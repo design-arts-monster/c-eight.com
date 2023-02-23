@@ -1,0 +1,9 @@
+.error404 {
+  .site-main {
+    ~ .footer-cta {
+      .title {
+        color: #f5f5f5 !important;
+      }
+    }
+  }
+}
