@@ -3,6 +3,7 @@
   width: 100%;
   background-color: map.get($colors, 'main-light');
   border: 4px solid map.get($colors, 'main-light');
+  transition: 0.2s;
   transform: skewX(-15deg);
 
   // 子要素を斜めにすると文字も斜めになるため親要素の背景に色をつける
@@ -49,7 +50,7 @@
     column-gap: 1.5em;
     align-items: center;
     justify-content: space-between;
-    padding: calc(1.2em - 4px) calc(1.5em - 4px);
+    padding: calc(1.2em - 4px) calc(0.9em - 4px);
     color: map.get($colors, 'white');
     background-color: transparent !important;
     background-image: none !important;
@@ -67,6 +68,8 @@
     &::before,
     &::after {
       display: inline-block;
+      width: 1.45em;
+      height: 0.37em;
       content: '';
     }
 

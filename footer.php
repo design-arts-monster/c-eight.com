@@ -37,7 +37,7 @@
 		<p class="logo">
 			<?php the_custom_logo(); ?>
 		</p>
-		<p class="copy">©<?php echo date("Y"); ?> C-EIGHT</p>
+		<p class="copy">©<?php echo date("Y"); ?> シーエイト</p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
