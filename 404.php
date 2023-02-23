@@ -14,44 +14,15 @@ get_header();
 <main id="primary" class="site-main">
 
 	<section class="error-404 not-found">
-		<header class="page-header">
-			<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'whitebase'); ?></h1>
-		</header><!-- .page-header -->
+		<div class="container">
+			<header class="page-header">
+				<h1 class="page-title">お探しのページは見つかりませんでした。</h1>
+			</header><!-- .page-header -->
 
-		<div class="page-content">
-			<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'whitebase'); ?></p>
-
-			<?php
-			get_search_form();
-
-			the_widget('WP_Widget_Recent_Posts');
-			?>
-
-			<div class="widget widget_categories">
-				<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'whitebase'); ?></h2>
-				<ul>
-					<?php
-					wp_list_categories(
-						array(
-							'orderby'    => 'count',
-							'order'      => 'DESC',
-							'show_count' => 1,
-							'title_li'   => '',
-							'number'     => 10,
-						)
-					);
-					?>
-				</ul>
-			</div><!-- .widget -->
-
-			<?php
-			/* translators: %1$s: smiley */
-			$whitebase_archive_content = '<p>' . sprintf(esc_html__('Try looking in the monthly archives. %1$s', 'whitebase'), convert_smilies(':)')) . '</p>';
-			the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$whitebase_archive_content");
-
-			the_widget('WP_Widget_Tag_Cloud');
-			?>
-
+			<div class="page-content">
+				<p>サイト更新などによってURLが変更になったか、URLが正しく入力されていない可能性があります。<br>
+					ブラウザの再読込を行ってもこのページが表示される場合は、トップページからお探し下さい。</p>
+			</div>
 		</div><!-- .page-content -->
 	</section><!-- .error-404 -->
 
