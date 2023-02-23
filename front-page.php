@@ -59,10 +59,10 @@
 		</div>
 		<div class="business-buttons wp-block-buttons container">
 			<div class="wp-block-button is-style-parallelogram">
-				<a href="<?php echo esc_url(home_url('/student')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>学生・求職者の方はこちら</strong></a>
+				<a href="<?php echo esc_url(home_url('/student/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>学生・求職者の方はこちら</strong></a>
 			</div>
 			<div class="wp-block-button is-style-parallelogram">
-				<a href="<?php echo esc_url(home_url('/corporation')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>法人・企業様はこちら</strong></a>
+				<a href="<?php echo esc_url(home_url('/corporation/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>法人・企業様はこちら</strong></a>
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,11 @@
 
 			$the_query = new WP_Query(array(
 				'post_type' => 'post',
-				'category__not_in' => array(6)
+				'category__not_in' => array(6),
+				'posts_per_page' => 6,
+				'meta_key' => 'date',
+				'orderby' => 'meta_value',
+				'order' => 'ASC',
 			)); ?>
 			<?php if ($the_query->have_posts()) : ?>
 				<!-- pagination here -->
@@ -105,7 +109,7 @@
 
 		<div class="event-buttons wp-block-buttons container">
 			<div class="wp-block-button is-style-parallelogram">
-				<a href="<?php echo esc_url(home_url('/event')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>イベント一覧はこちら</strong></a>
+				<a href="<?php echo esc_url(home_url('/event/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>イベント一覧はこちら</strong></a>
 			</div>
 		</div>
 	</div>

@@ -165,7 +165,7 @@
 
 			<div class="entry-buttons wp-block-buttons">
 				<div class="wp-block-button is-style-parallelogram">
-					<a href="<?php echo esc_url(home_url('/contact')); ?>" class="wp-block-button__link has-yellow-background-color has-text-main-color wp-element-button"><strong>参加申し込み</strong></a>
+					<a href="<?php echo esc_url(home_url('/contact/')); ?>" class="wp-block-button__link has-yellow-background-color has-text-main-color wp-element-button"><strong>参加申し込み</strong></a>
 				</div>
 			</div>
 		</div>
