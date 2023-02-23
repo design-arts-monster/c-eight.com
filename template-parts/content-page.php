@@ -17,8 +17,6 @@
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
-	<?php whitebase_post_thumbnail(); ?>
-
 	<div class="entry-content<?php echo (!(is_front_page() || is_home())) ? '' : ' m-t-0'; ?>">
 		<?php
 		the_content();
