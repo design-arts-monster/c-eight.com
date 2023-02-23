@@ -4,6 +4,6 @@
   display: none;
 }
 
-@include responsive('.mq-dn-dowm', $breakpoint-down) {
+@include responsive('.mq-dn-down', $breakpoint-down) {
   display: none;
 }

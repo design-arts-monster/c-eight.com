@@ -20,6 +20,14 @@ export const infinityScroll = () => {
   infinityScrollInit(sliderLeft, false)
 }
 
+export const carouselSlider = () => {
+  const carousel: any = $('.is-style-carousel')
+  if (!carousel) {
+    return
+  }
+  carouselInit(carousel)
+}
+
 export const infinityScrollInit = (obj: any, rtl: boolean = false) => {
   obj.slick({
     autoplay: true, //自動でスクロール
@@ -37,6 +45,31 @@ export const infinityScrollInit = (obj: any, rtl: boolean = false) => {
         breakpoint: 960,
         settings: {
           slidesToShow: 1.2,
+        },
+      },
+    ],
+  })
+}
+
+export const carouselInit = (obj: any, rtl: boolean = false) => {
+  obj.slick({
+    infinite: true, //スライドのループ有効化
+    dots: true, //ドットのナビゲーションを表示
+    centerMode: true, //要素を中央寄せ
+    slidesToShow: 4, //表示するスライドの数
+    autoplay: false, //自動再生
+    rtl, //スライダーを左から右に流す（逆向き）
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3, //表示するスライドの数
+        },
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1, //表示するスライドの数
         },
       },
     ],

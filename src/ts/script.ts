@@ -1,5 +1,6 @@
-import { infinityScroll } from './modules/slick'
+import { infinityScroll, carouselSlider } from './modules/slick'
 
 window.addEventListener('DOMContentLoaded', () => {
   infinityScroll()
+  carouselSlider()
 })

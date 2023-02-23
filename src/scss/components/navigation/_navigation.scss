@@ -4,12 +4,12 @@
   align-items: stretch;
   width: 125px;
 
-  @include mq-up(md) {
+  @include mq-up('md') {
     display: inline-flex;
     width: auto;
   }
 
-  @include mq-down(md) {
+  @include mq-down('md') {
     .menu-content {
       position: absolute;
       top: 60px;
@@ -258,7 +258,7 @@
   cursor: pointer;
   background-color: map.get($colors, 'text-main');
 
-  @include mq-down(md) {
+  @include mq-down('md') {
     display: flex;
   }
 
@@ -341,7 +341,7 @@
   display: none;
 }
 
-@include mq-up(md) {
+@include mq-up('md') {
   .menu-toggle {
     display: none;
   }

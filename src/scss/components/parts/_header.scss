@@ -24,7 +24,7 @@
       a {
         display: block;
 
-        @include mq-down(md) {
+        @include mq-down('md') {
           height: 40px;
         }
 

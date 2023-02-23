@@ -191,6 +191,27 @@ function add_page_slug_class_name($classes) {
 }
 
 /**
+ * mediaクエリ
+ */
+function get_media($size, $width = 'down') {
+	$breakepoint = array(
+		'up' => array(
+			'sm' => '(min-width: 520px)',
+			'md' => '(min-width: 960px)',
+			'lg' => '(min-width: 1280px)',
+			'xl' => '(min-width: 1367px)'
+		),
+		'down' => array(
+			'sm' => '(max-width: 519px)',
+			'md' => '(max-width: 959px)',
+			'lg' => '(max-width: 1279px)',
+			'xl' => '(max-width: 1366px)'
+		)
+	);
+	return $breakepoint[$width][$size];
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

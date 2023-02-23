@@ -50,7 +50,7 @@
 						array(
 							'theme_location' => 'header-menu-pc',
 							'menu_id'        => 'header-menu-pc',
-							'container_class' => 'header-menu-pc-container mq-dn-dowm-md',
+							'container_class' => 'header-menu-pc-container mq-dn-down-md',
 						)
 					);
 					?>
