@@ -134,6 +134,7 @@
 
       a {
         width: 200px;
+        transition: 0.2s;
       }
 
       :hover > a,
@@ -174,6 +175,7 @@
         color: map.get($colors, 'white');
         text-align: center;
         text-decoration: none;
+        transition: 0.2s;
 
         &::before {
           display: block;
@@ -211,6 +213,7 @@
     color: map.get($colors, 'text-main');
     text-decoration: none;
     background-color: map.get($colors, 'yellow');
+    transition: 0.2s;
 
     @media (hover: hover) {
       &:hover {
