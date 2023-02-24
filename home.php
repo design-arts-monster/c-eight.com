@@ -18,7 +18,7 @@ get_header();
 			<span>開催予定のイベント</span>
 		</h1>
 		<div class="thumbnail">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/pages/event/thumbnail.png" alt="EVENT LIST">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/pages/event/thumbnail.jpg" alt="EVENT LIST">
 		</div>
 	</header><!-- .page-header -->
 
