@@ -1,0 +1,819 @@
+.page.page-slug-student {
+  .site-main {
+    ~ .footer-cta {
+      .title {
+        color: map.get($colors, 'white') !important;
+      }
+    }
+  }
+
+  .caption {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include mq-down('md') {
+      font-size: 40px;
+    }
+
+    > span {
+      display: block;
+      margin-top: 20px;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+
+      @include mq-down('md') {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .athlete-connect {
+    .athlete-caption {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      max-width: 700px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-weight: 700;
+      text-align: left;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 735px;
+        bottom: 0;
+        z-index: 1;
+        display: block;
+        width: 100vw;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background-color: map.get($colors, 'white');
+      }
+
+      @include mq-down('md') {
+        max-width: 86%;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      > .text {
+        position: relative;
+        z-index: 2;
+        color: map.get($colors, 'white');
+
+        span {
+          &:first-child {
+            font-size: 65px;
+
+            @include mq-down('md') {
+              font-size: 34px;
+            }
+          }
+
+          &:last-child {
+            font-size: 56px;
+
+            @include mq-down('md') {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: -8%;
+        bottom: 0;
+        z-index: 1;
+        display: block;
+        width: calc(100vw + 8%);
+        max-width: calc(700px + 30vw);
+        content: '';
+        background: map.get($gradients, 'yellow-orange-red');
+        transform: skewX(-15deg);
+      }
+    }
+
+    .athlete-content {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      margin-top: -90px;
+      font-size: 21px;
+      line-height: 1.7;
+      color: map.get($colors, 'white');
+      background-color: map.get($colors, 'main');
+
+      @include mq-down('md') {
+        padding-top: 97px;
+        margin-top: -80px;
+        font-size: 14px;
+      }
+
+      .athlete-container {
+        max-width: 900px;
+        margin: auto;
+      }
+    }
+  }
+
+  .support {
+    background-color: map.get($colors, 'gray-light');
+
+    .caption {
+      text-align: right;
+    }
+
+    .support-wrap {
+      padding-bottom: 380px;
+      overflow: hidden;
+
+      @include mq-down('md') {
+        margin-top: 40px;
+      }
+
+      .support-content {
+        position: relative;
+
+        &:not(:first-of-type) {
+          margin-top: 60px;
+        }
+
+        &:nth-of-type(even) {
+          .support-content-img {
+            justify-content: flex-end;
+          }
+
+          .support-content-wrap {
+            .container {
+              justify-content: flex-start;
+
+              .support-content-inner {
+                padding-right: 80px;
+                padding-left: 0;
+
+                @include mq-down('md') {
+                  padding-right: 20px;
+                }
+
+                &::after {
+                  right: -8%;
+                  left: auto;
+                  transform: skewX(-15deg);
+
+                  @include mq-down('md') {
+                    right: 9%;
+                    transform: skewX(-10deg);
+                  }
+                }
+
+                .support-content-text {
+                  @include mq-down('md') {
+                    padding-right: 50px;
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .support-content-img {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          justify-content: flex-start;
+
+          @include mq-down('md') {
+            max-width: 90%;
+          }
+        }
+
+        .support-content-wrap {
+          position: relative;
+          z-index: 2;
+          margin-top: -400px;
+
+          @include mq-down('md') {
+            margin-top: -20px;
+          }
+
+          .container {
+            display: flex;
+            justify-content: flex-end;
+
+            .support-content-inner {
+              position: relative;
+              z-index: 1;
+              max-width: 780px;
+              padding-top: 45px;
+              padding-bottom: 45px;
+              padding-left: 80px;
+
+              @include mq-down('md') {
+                padding-top: 20px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+              }
+
+              &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -8%;
+                z-index: 1;
+                display: block;
+                width: calc(100vw + 80px);
+                content: '';
+                background-color: map.get($colors, 'white');
+                box-shadow: 0 3px 20px #00000029;
+                transform: skewX(15deg);
+
+                @include mq-down('md') {
+                  left: 9%;
+                  transform: skewX(10deg);
+                }
+              }
+
+              .support-content-caption {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                column-gap: 20px;
+                align-items: flex-end;
+                margin-bottom: 30px;
+                font-size: 40px;
+                line-height: 1.25;
+                color: map.get($colors, 'main');
+
+                @include mq-down('md') {
+                  margin-bottom: 20px;
+                  font-size: 21px;
+                }
+
+                .num {
+                  font-size: 120px;
+                  font-style: italic;
+                  line-height: 1;
+
+                  @include mq-down('md') {
+                    font-size: 64px;
+                  }
+                }
+              }
+
+              .support-content-text {
+                position: relative;
+                z-index: 2;
+                font-size: 18px;
+                line-height: 1.8;
+
+                @include mq-down('md') {
+                  padding-left: 50px;
+                  font-size: 14px;
+                  line-height: 1.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .career-adviser {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-top: -300px;
+    overflow: hidden;
+
+    .caption {
+      position: relative;
+      z-index: 2;
+      color: map.get($colors, 'white');
+      text-align: left;
+    }
+
+    .career-adviser-wrap {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: -60px;
+        right: -100vw;
+        bottom: -60px;
+        left: -100vw;
+        z-index: 1;
+        content: '';
+        background-color: map.get($colors, 'main');
+        transform: rotate(6.5deg);
+      }
+
+      > .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .career-adviser-content {
+        display: flex;
+        column-gap: 40px;
+        align-items: stretch;
+        justify-content: center;
+
+        @include mq-down('md') {
+          flex-wrap: wrap;
+          column-gap: 0;
+        }
+
+        .career-adviser-menber {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          width: 100%;
+          max-width: calc(50% - 40px);
+
+          @include mq-down('md') {
+            max-width: 100%;
+          }
+
+          &:last-of-type {
+            .career-adviser-menber-image {
+              .name {
+                right: -1.2em;
+                left: 0;
+                justify-content: flex-end;
+
+                @include mq-down('md') {
+                  right: 30px;
+                }
+              }
+            }
+
+            .career-adviser-menber-profile {
+              padding-right: 0;
+              padding-left: 60px;
+
+              @include mq-down('md') {
+                padding-left: 30px;
+              }
+
+              &::after {
+                right: auto;
+                left: 0;
+              }
+            }
+          }
+
+          .career-adviser-menber-image {
+            position: relative;
+            width: 100%;
+            text-align: center;
+
+            .name {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: -1.2em;
+              z-index: 2;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              width: 100%;
+              margin: auto;
+              font-size: 72px;
+              font-style: italic;
+              font-weight: 700;
+              line-height: 1.18;
+              color: map.get($colors, 'white');
+              text-align: left;
+              opacity: 0.15;
+
+              @include mq-down('md') {
+                left: 30px;
+                font-size: 48px;
+              }
+            }
+
+            img {
+              position: relative;
+              z-index: 3;
+              vertical-align: bottom;
+
+              @include mq-down('md') {
+                max-width: 80%;
+              }
+            }
+          }
+
+          .career-adviser-menber-profile {
+            position: relative;
+            width: 100%;
+            padding-top: 30px;
+            padding-right: 60px;
+            padding-bottom: 30px;
+
+            @include mq-down('md') {
+              padding-right: 30px;
+            }
+
+            &::after {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 1;
+              display: block;
+              width: calc(100vw + 80px);
+              content: '';
+              background-color: map.get($colors, 'white');
+              transform: skewX(-9deg);
+            }
+
+            .profile-wrap {
+              position: relative;
+              z-index: 2;
+
+              .company {
+                font-size: 14px;
+              }
+
+              .name-wrap {
+                display: flex;
+                column-gap: 10px;
+                align-items: baseline;
+                justify-content: flex-start;
+
+                .name {
+                  font-size: 40px;
+                  font-weight: 700;
+                  color: map.get($colors, 'main');
+                }
+
+                .education {
+                  position: relative;
+                  z-index: 2;
+                  padding-right: 5px;
+                  padding-left: 5px;
+                  font-size: 14px;
+                  line-height: 1.35;
+                  color: map.get($colors, 'white');
+
+                  span {
+                    position: relative;
+                    z-index: 2;
+                  }
+
+                  &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
+                    margin: auto;
+                    content: '';
+                    background-color: map.get($colors, 'main');
+                    transform: skewX(-15deg);
+                  }
+                }
+              }
+
+              .message {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flow {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    .caption {
+      margin-bottom: 78px;
+
+      .free {
+        padding: 5px 10px;
+        margin-left: 20px;
+        font-size: 17px;
+        font-style: normal;
+        line-height: 1.35;
+        color: map.get($colors, 'text-main');
+        background-color: map.get($colors, 'yellow');
+
+        @include mq-down('md') {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .flow-wrap {
+      .flow-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        &:first-child {
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100vw;
+            height: 1px;
+            content: '';
+            background-color: map.get($colors, 'main');
+
+            @include mq-down('md') {
+              width: 100%;
+            }
+          }
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100vw;
+          height: 1px;
+          content: '';
+          background-color: map.get($colors, 'main');
+
+          @include mq-down('md') {
+            width: 100%;
+          }
+        }
+
+        .step {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 25.5%;
+          text-align: center;
+
+          @include mq-down('md') {
+            width: 33%;
+          }
+
+          .step-num {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 32px;
+            font-weight: 700;
+            color: map.get($colors, 'main');
+
+            @include mq-down('md') {
+              font-size: 21px;
+            }
+          }
+        }
+
+        .flow-content {
+          width: 74.5%;
+          padding-left: 20px;
+
+          @include mq-down('md') {
+            width: 67%;
+          }
+
+          .flow-title {
+            margin-bottom: 15px;
+            font-size: 36px;
+            font-weight: 700;
+
+            @include mq-down('md') {
+              font-size: 21px;
+            }
+          }
+
+          .flow-text {
+            font-size: 21px;
+
+            @include mq-down('md') {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    position: relative;
+    z-index: 1;
+    padding-top: 400px;
+    padding-bottom: 320px;
+    margin-top: -150px;
+    overflow: hidden;
+
+    @include mq-down('md') {
+      padding-bottom: 260px;
+    }
+
+    .faq-wrap {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: -60px;
+        right: -100vw;
+        bottom: -100vw;
+        left: -100vw;
+        z-index: 1;
+        content: '';
+        background-color: map.get($colors, 'gray-light');
+        transform: rotate(-11deg);
+      }
+
+      > .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .faq-caption {
+        padding-top: 100px;
+        margin-top: -100px;
+        margin-bottom: 70px;
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+
+        @include mq-down('md') {
+          margin-bottom: 40px;
+          font-size: 40px;
+        }
+
+        span {
+          display: block;
+          margin-top: 15px;
+          font-size: 20px;
+
+          @include mq-down('md') {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .faq-item {
+        box-shadow: 0 3px 20px #0000001a;
+        transition: 0.2s;
+
+        &:not(:first-of-type) {
+          margin-top: 40px;
+        }
+
+        .question {
+          position: relative;
+          z-index: 2;
+          display: block;
+          padding: 20px 80px 20px 100px;
+          font-size: 27px;
+          font-weight: 700;
+          line-height: 1.4;
+          color: map.get($colors, 'white');
+          cursor: pointer;
+          background-color: map.get($colors, 'main');
+
+          @include mq-down('md') {
+            padding: 20px 50px 20px 60px;
+            font-size: 18px;
+          }
+
+          &.open {
+            &::before {
+              transform: rotate(0deg);
+            }
+
+            &::after {
+              left: auto;
+              border: none;
+              transform: none;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 40px;
+            bottom: 0;
+            display: block;
+            width: 28px;
+            height: 4px;
+            margin: auto;
+            content: '';
+            background-color: map.get($colors, 'white');
+            transition: 0.3s;
+            transform: rotate(90deg);
+
+            @include mq-down('md') {
+              right: 20px;
+              width: 21px;
+              height: 3px;
+            }
+          }
+
+          &::after {
+            position: absolute;
+            top: 0;
+            right: 40px;
+            bottom: 0;
+            display: block;
+            width: 28px;
+            height: 4px;
+            margin: auto;
+            content: '';
+            background-color: map.get($colors, 'white');
+
+            @include mq-down('md') {
+              right: 20px;
+              width: 21px;
+              height: 3px;
+            }
+          }
+
+          span {
+            display: flex;
+            align-items: center;
+
+            &::before {
+              position: absolute;
+              top: 5px;
+              left: 30px;
+              width: 45px;
+              margin-right: 30px;
+              font-size: 54px;
+              font-weight: 700;
+              line-height: 1;
+              text-align: center;
+              content: 'Q';
+
+              @include mq-down('md') {
+                top: 13px;
+                left: 20px;
+                width: 30px;
+                font-size: 32px;
+              }
+            }
+          }
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+        }
+
+        .anser {
+          position: relative;
+          z-index: 1;
+          display: none;
+          padding: 20px 30px 20px 100px;
+          font-size: 24px;
+          line-height: 1.8;
+          background-color: map.get($colors, 'white');
+
+          @include mq-down('md') {
+            padding: 20px 30px 20px 60px;
+            font-size: 14px;
+          }
+
+          &::before {
+            position: absolute;
+            top: 0.4em;
+            left: 30px;
+            display: block;
+            width: 45px;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 1;
+            color: map.get($colors, 'yellow');
+            text-align: center;
+            content: 'A';
+            transform: translateY(-10%);
+
+            @include mq-down('md') {
+              left: 20px;
+              width: 30px;
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
