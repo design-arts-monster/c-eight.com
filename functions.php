@@ -271,3 +271,10 @@ require get_template_directory() . '/inc/custom-block.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * ContactForm7
+ */
+if (is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
+	require get_template_directory() . '/inc/contactform7.php';
+}

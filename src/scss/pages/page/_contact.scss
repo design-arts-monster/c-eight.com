@@ -1,0 +1,114 @@
+.page {
+  &.page-slug-contact,
+  &.page-slug-contact-company,
+  &.page-slug-thanks {
+    .site-main {
+      ~ .footer-cta {
+        .title {
+          color: map.get($colors, 'white') !important;
+        }
+      }
+    }
+  }
+}
+
+.content-contact {
+  padding-top: 178px;
+  padding-bottom: 320px;
+  background-color: map.get($colors, 'gray-light');
+
+  @include mq-down('md') {
+    padding-top: 120px;
+    padding-bottom: 260px;
+  }
+
+  .entry-title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 60px;
+    font-size: 42px;
+    text-align: center;
+
+    @include mq-down('md') {
+      margin-bottom: 45px;
+      font-size: 27px;
+    }
+
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      margin: auto;
+      font-size: 98px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      content: attr(data-desc);
+      opacity: 0.06;
+
+      @include mq-down('md') {
+        bottom: 20px;
+        font-size: 72px;
+        text-align: center;
+      }
+    }
+  }
+
+  .entry-content {
+    .contact-wrap {
+      gap: 0;
+      align-items: stretch;
+      justify-content: space-evenly;
+      padding-top: 30px;
+      padding-bottom: 38px;
+      margin-top: 70px;
+      margin-bottom: 115px;
+      background-color: map.get($colors, 'white');
+
+      @include mq-down('md') {
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+
+      > .wp-block-column {
+        display: flex;
+        flex-basis: auto;
+        flex-direction: column;
+        flex-grow: 0;
+        justify-content: space-around;
+        width: 40%;
+
+        @include mq-down('md') {
+          width: 100%;
+        }
+
+        .wp-block-buttons {
+          padding-right: 10%;
+          padding-left: 10%;
+          margin-top: 25px;
+
+          @include mq-down('md') {
+            margin-bottom: 40px;
+          }
+
+          .wp-element-button {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1;
+          }
+        }
+
+        .tel {
+          font-size: 40px;
+          font-weight: 700;
+          color: map.get($colors, 'main');
+        }
+      }
+    }
+  }
+}

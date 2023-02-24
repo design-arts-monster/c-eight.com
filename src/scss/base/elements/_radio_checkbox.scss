@@ -1,0 +1,81 @@
+label {
+  &:has(input[type='radio'], input[type='checkbox']) {
+    position: relative;
+    display: inline-flex;
+    column-gap: 23px;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include mq-down('md') {
+      column-gap: 15px;
+    }
+
+    &:has(input[type='radio']) {
+      &::before {
+        border-radius: 9999px;
+      }
+    }
+
+    &::before {
+      display: block;
+      width: 30px;
+      height: 30px;
+      content: '';
+      background-color: map.get($colors, 'white');
+
+      @include mq-down('md') {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:has(:checked) {
+      &::before {
+        background-color: map.get($colors, 'main');
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 4px;
+        left: 5px;
+        display: block;
+        width: 20px;
+        height: 10px;
+        margin: auto;
+        content: '';
+        border-bottom: 2px solid map.get($colors, 'white');
+        border-left: 2px solid map.get($colors, 'white');
+        transform: rotate(-45deg);
+
+        @include mq-down('md') {
+          width: 14px;
+          height: 7px;
+        }
+      }
+    }
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+
+    + * {
+      font-size: 18px;
+      font-weight: 700;
+
+      @include mq-down('md') {
+        font-size: 16px;
+      }
+    }
+  }
+}
