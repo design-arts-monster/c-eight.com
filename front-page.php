@@ -16,26 +16,7 @@
 		</div>
 	</div>
 
-	<figure class="sports-gallery wp-block-gallery is-style-infinity-scroll-right has-nested-images">
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-1.png" alt="">
-		</figure>
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-2.png" alt="">
-		</figure>
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-3.png" alt="">
-		</figure>
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-1.png" alt="">
-		</figure>
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-2.png" alt="">
-		</figure>
-		<figure class="wp-block-image">
-			<img decoding="async" loading="lazy" width="640" height="416" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/front-page/gallery-3.png" alt="">
-		</figure>
-	</figure>
+	<?php get_template_part('template-parts/content', 'infinity-scroll'); ?>
 
 	<div class="business-content">
 		<div class="container">
