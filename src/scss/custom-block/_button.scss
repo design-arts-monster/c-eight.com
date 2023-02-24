@@ -104,6 +104,17 @@
       &:has(> .has-#{$key}-border-color) {
         border-color: $value;
       }
+
+      @media (hover: hover) {
+        &:hover {
+          &:has(> .has-#{$key}-color) {
+            background-color: $value;
+          }
+          &:has(> .has-#{$key}-border-color) {
+            background-color: $value;
+          }
+        }
+      }
     }
 
     > .wp-element-button {
