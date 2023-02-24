@@ -2,9 +2,11 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  margin-bottom: 80px;
 
   @include mq-down('md') {
     flex-flow: column;
+    margin-bottom: 0;
   }
 
   .title {
@@ -59,9 +61,10 @@
 
   .thumbnail {
     position: relative;
+    display: flex;
+    align-items: center;
     width: 50%;
     height: 260px;
-    margin-bottom: 80px;
     overflow: hidden;
 
     @include mq-down('md') {
