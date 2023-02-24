@@ -82,8 +82,10 @@
 				<?php wp_reset_postdata(); ?>
 
 			<?php else : ?>
-				<div class="container">
-					<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+				<div class="event-nothing">
+					<div class="container">
+						<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+					</div>
 				</div>
 			<?php endif; ?>
 		</div>

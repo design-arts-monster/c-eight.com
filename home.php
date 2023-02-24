@@ -22,14 +22,14 @@ get_header();
 		</div>
 	</header><!-- .page-header -->
 
-	<div class="container">
-		<?php if (have_posts()) :
-			$categories = get_categories(array(
-				'exclude' => '6,7,8',
-				'order' => 'ASC',
-				'orderby' => 'id'
-			));
-		?>
+	<?php if (have_posts()) :
+		$categories = get_categories(array(
+			'exclude' => '6,7,8',
+			'order' => 'ASC',
+			'orderby' => 'id'
+		));
+	?>
+		<div class="container">
 			<div class="cat-nav">
 				<div class="cat-nav-list current">
 					<a class="italic" href="<?php echo esc_url(home_url('/event/')); ?>"><span>ALL</span></a>
@@ -62,10 +62,14 @@ get_header();
 				</div>
 			<?php endif; ?>
 
-		<?php else : ?>
-			<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
-		<?php endif; ?>
-	</div>
+		</div>
+	<?php else : ?>
+		<div class="event-nothing">
+			<div class="container">
+				<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+			</div>
+		</div>
+	<?php endif; ?>
 </main><!-- #main -->
 
 <?php
