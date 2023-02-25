@@ -179,7 +179,7 @@
 						</div>
 					</div>
 					<div class="flow-content">
-						<h3 class="flow-title">ヒアリング・カウンセリング</h3>
+						<h3 class="flow-title">ヒアリング・<br class="mq-dn-up-md">カウンセリング</h3>
 						<p class="flow-text">専任のアドバイザーがヒアリングをさせていただきながら将来の目標を共有していきます。</p>
 					</div>
 				</div>

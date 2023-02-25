@@ -17,6 +17,10 @@
   .cat-nav {
     margin-bottom: 90px;
 
+    @include mq-down('md') {
+      margin-bottom: 40px;
+    }
+
     .cat-nav-wrap {
       display: flex;
       column-gap: 10px;
@@ -114,6 +118,10 @@
     .cat-nav-list-end {
       margin-top: 80px;
 
+      @include mq-down('md') {
+        margin-top: 40px;
+      }
+
       a {
         position: relative;
         display: block;
@@ -140,8 +148,8 @@
           right: 30px;
           bottom: 30px;
           display: block;
-          width: 40px;
-          height: 10px;
+          width: 1.45em;
+          height: 0.37em;
           content: '';
           background-color: map.get($colors, 'white');
           mask-image: url('./img/icon/arrow/arrow-line-right.svg');

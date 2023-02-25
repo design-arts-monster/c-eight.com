@@ -179,7 +179,6 @@
         letter-spacing: 0;
 
         @include mq-down('md') {
-          z-index: 1;
           margin-left: 0;
           font-size: 72px;
         }
@@ -296,7 +295,7 @@
           }
 
           @include mq-down('md') {
-            font-size: 43px;
+            font-size: 42px;
           }
         }
 

@@ -137,6 +137,7 @@
       overflow: hidden;
 
       @include mq-down('md') {
+        padding-bottom: 240px;
         margin-top: 40px;
       }
 
@@ -298,6 +299,10 @@
     padding-bottom: 200px;
     margin-top: -300px;
     overflow: hidden;
+
+    @include mq-down('md') {
+      padding-bottom: 140px;
+    }
 
     .caption {
       position: relative;
@@ -628,6 +633,7 @@
 
     @include mq-down('md') {
       padding-bottom: 260px;
+      margin-top: -280px;
     }
 
     .faq-wrap {
@@ -643,6 +649,10 @@
         content: '';
         background-color: map.get($colors, 'gray-light');
         transform: rotate(-11deg);
+
+        @include mq-down('md') {
+          top: 0;
+        }
       }
 
       > .container {

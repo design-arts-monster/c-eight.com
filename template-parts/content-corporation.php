@@ -44,7 +44,7 @@
 						<div class="merit-content-info">
 							<h3 class="merit-content-title">
 								<span class="merit-num"><span class="text">MERIT</span><span class="num">01</span></span>
-								<span class="merit-text"><span class="strong">求める人物像</span><span class="text">を採用しやすい</span></span>
+								<span class="merit-text"><span class="strong">求める人物像</span><span class="text">を<br class="mq-dn-up-md">採用しやすい</span></span>
 							</h3>
 							<div class="merit-content-text">
 								<p>人材紹介サービスを利用することで、求める人物像にマッチした人を採用しやすくなります。企業様の就業条件をもとに人材紹介会社が候補者を探すためです。<br>求める人材により近い人材の採用を実現するためには、アドバイザーに企業様が求める人物像などを詳しくお打合せさせていただく必要があります。</p>
@@ -84,7 +84,7 @@
 						<div class="merit-content-info">
 							<h3 class="merit-content-title">
 								<span class="merit-num"><span class="text">MERIT</span><span class="num">03</span></span>
-								<span class="merit-text"><span class="strong">募集をすぐに</span><span class="text">始められる</span></span>
+								<span class="merit-text"><span class="strong">募集をすぐに</span><br class="mq-dn-up-md"><span class="text">始められる</span></span>
 							</h3>
 							<div class="merit-content-text">
 								<p>人材紹介会社と基本契約を結んでいれば、ヒアリングや求人票の送付だけで人材募集を開始できることも大きなメリットの一つです。求人サイトを利用する場合は募集までにやや時間がかかります。取材や素材提供、募集記事の執筆や原稿確認などの工程が生じるためです。<br>一方、募集をすぐにはじめられる人材紹介はスピーディーに人材がほし い際に役に立ちます。</p>
@@ -124,7 +124,7 @@
 						<div class="merit-content-info">
 							<h3 class="merit-content-title">
 								<span class="merit-num"><span class="text">MERIT</span><span class="num">05</span></span>
-								<span class="merit-text"><span class="text">採用担当者の</span><span class="strong">業務負荷を削減</span><span class="text">できる</span></span>
+								<span class="merit-text"><span class="text">採用担当者の</span><br class="mq-dn-up-md"><span class="strong">業務負荷を削減</span><span class="text">できる</span></span>
 							</h3>
 							<div class="merit-content-text">
 								<p>人材紹介エージェントが登録者のなかから、相応しいと思われるスキルをもつ候補者のサーチやリクルーティング、日程調整を行うため採用担当者の業務負荷を削減できます。<br>また応募書類の精度も高められるため、人事担当者の書類選考の工数を削減できるというメリットもあります。</p>

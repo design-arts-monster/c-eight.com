@@ -55,6 +55,16 @@
 
         .menu-contact {
           margin-top: 70px;
+
+          .wp-block-buttons {
+            max-width: 92%;
+
+            .wp-block-button {
+              &:not(:first-of-type) {
+                margin-top: 27px;
+              }
+            }
+          }
         }
 
         .sns {
@@ -73,6 +83,12 @@
             align-items: center;
             justify-content: space-between;
             margin: auto;
+
+            a {
+              &::after {
+                content: none;
+              }
+            }
           }
         }
 

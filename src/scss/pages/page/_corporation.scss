@@ -189,6 +189,10 @@
     margin-top: -245px;
     overflow: hidden;
 
+    @include mq-down('md') {
+      margin-top: -250px;
+    }
+
     .merit-wrap {
       position: relative;
       background-color: map.get($colors, 'main');
@@ -211,6 +215,7 @@
         transform: rotate(7deg);
 
         @include mq-down('md') {
+          top: -60px;
           left: -20%;
         }
 
@@ -273,6 +278,12 @@
 
                 @include mq-down('md') {
                   order: 2;
+                  padding-right: 0;
+                  padding-left: 0;
+                }
+
+                .merit-content-text {
+                  padding-right: 10px;
                 }
               }
             }
@@ -329,8 +340,8 @@
 
               @include mq-down('md') {
                 width: 100%;
-                padding-right: 20px;
-                padding-left: 20px;
+                padding-right: 10px;
+                padding-left: 10px;
                 margin-top: -50px;
               }
 
@@ -339,7 +350,7 @@
                 font-weight: 700;
 
                 @include mq-down('md') {
-                  font-size: 32px;
+                  font-size: 30px;
                 }
 
                 .merit-num {
@@ -381,6 +392,10 @@
                   display: block;
                   margin-bottom: 10px;
 
+                  @include mq-down('md') {
+                    padding-left: 10px;
+                  }
+
                   .strong {
                     color: map.get($colors, 'main');
                   }
@@ -391,6 +406,7 @@
                 font-size: 20px;
 
                 @include mq-down('md') {
+                  padding-left: 10px;
                   font-size: 14px;
                 }
               }
@@ -409,6 +425,7 @@
     overflow: hidden;
 
     @include mq-down('md') {
+      padding-top: 170px;
       padding-bottom: 150px;
     }
 
