@@ -278,3 +278,10 @@ if (defined('JETPACK__VERSION')) {
 if (is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
 	require get_template_directory() . '/inc/contactform7.php';
 }
+
+/**
+ * Breadcrumb NavXT
+ */
+if (is_plugin_active('breadcrumb-navxt/breadcrumb-navxt.php')) {
+	require get_template_directory() . '/inc/breadcrumb-navxt.php';
+}
