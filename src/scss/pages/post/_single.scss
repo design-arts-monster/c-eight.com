@@ -278,6 +278,11 @@
       .wp-block-button {
         max-width: 420px;
         font-size: 27px;
+
+        @include mq-down('md') {
+          width: 90%;
+          font-size: 19px;
+        }
       }
     }
   }

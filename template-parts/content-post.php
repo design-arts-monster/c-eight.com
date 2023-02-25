@@ -146,7 +146,7 @@
 						</tbody>
 					</table>
 				</figure>
-				<h2 class="caption"><span data-desc="SCHEDULE">/ 当日のタイムスケジュール</span></h2>
+				<h2 class="caption"><span data-desc="SCHEDULE"><span class="mq-dn-down-md">/ </span><br class="mq-dn-up-md">当日のタイムスケジュール</span></h2>
 				<figure class="event-schedule wp-block-table is-style-schedule">
 					<table>
 						<tbody>

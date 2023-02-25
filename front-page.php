@@ -101,7 +101,7 @@
 
 			<?php elseif ($cat_end->count > 0) :	?>
 				<div class="wp-block-button is-style-parallelogram">
-					<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>過去のイベント一覧はこちら</strong></a>
+					<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>過去のイベント一覧</strong></a>
 				</div>
 			<?php endif; ?>
 		</div>

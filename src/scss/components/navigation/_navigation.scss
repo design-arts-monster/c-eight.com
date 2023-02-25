@@ -53,6 +53,10 @@
           }
         }
 
+        .menu-contact {
+          margin-top: 70px;
+        }
+
         .sns {
           margin-top: 50px;
           text-align: center;
@@ -232,6 +236,7 @@
       order: 1;
       font-size: 1.875rem;
       font-style: italic;
+      font-weight: 500;
       content: attr(data-desc);
     }
 

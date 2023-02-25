@@ -188,7 +188,7 @@
       .img {
         position: relative;
         width: 62%;
-        margin-top: -30px;
+        margin-top: -20px;
 
         @include mq-down('md') {
           z-index: 0;
@@ -328,6 +328,14 @@
           width: 98%;
         }
       }
+
+      .wp-element-button {
+        font-size: 22px;
+
+        @include mq-down('md') {
+          font-size: 16px;
+        }
+      }
     }
   }
 
@@ -405,6 +413,11 @@
 
       .wp-block-button {
         max-width: 480px;
+        font-size: 22px;
+
+        @include mq-down('md') {
+          font-size: 16px;
+        }
       }
     }
 

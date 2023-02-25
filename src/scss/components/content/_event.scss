@@ -173,6 +173,7 @@
 
   .venue {
     font-size: 15px;
+    font-weight: 700;
     color: map.get($colors, 'main');
 
     @include mq-down('md') {
