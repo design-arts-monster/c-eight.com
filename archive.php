@@ -9,13 +9,15 @@
  */
 
 get_header();
+$tax_id = get_query_var('cat');
+$post_type = get_query_var('post_type');
+$cat_name = get_category($tax_id)->cat_name;
 ?>
 
 <main id="primary" class="site-main">
-
 	<header class="page-header thumb-header">
 		<h1 class="page-title title" data-desc="EVENT LIST">
-			<span>開催予定のイベント</span>
+			<span>「<?php echo esc_html($cat_name); ?>」一覧</span>
 		</h1>
 		<div class="thumbnail">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/pages/event/thumbnail.jpg" alt="EVENT LIST">
@@ -28,19 +30,28 @@ get_header();
 			'order' => 'ASC',
 			'orderby' => 'id'
 		));
-		$tax_id = get_query_var('cat');
-		$post_type = get_query_var('post_type');
 	?>
+
 		<div class="container">
 			<div class="cat-nav">
-				<div class="cat-nav-list">
-					<a class="italic" href="<?php echo esc_url(home_url('/event/')); ?>"><span>ALL</span></a>
-				</div>
-				<?php foreach ($categories as $cat) : ?>
-					<div class="cat-nav-list <?php echo $cat->term_id === $tax_id ? 'current' : ''; ?>">
-						<a href="<?php echo esc_url(home_url('/category/') . $cat->slug); ?>"><span><?php echo esc_html($cat->name); ?></span></a>
+				<div class="cat-nav-wrap">
+					<div class="cat-nav-list">
+						<a class="italic" href="<?php echo esc_url(home_url('/event/')); ?>"><span>ALL</span></a>
 					</div>
-				<?php endforeach; ?>
+					<?php foreach ($categories as $cat) : ?>
+						<div class="cat-nav-list <?php echo $cat->term_id === $tax_id ? 'current' : ''; ?>">
+							<a href="<?php echo esc_url(home_url('/category/') . $cat->slug); ?>"><span><?php echo esc_html($cat->name); ?></span></a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<?php
+				$cat_end = get_category(6);
+				if ($cat_end->count > 0 && $tax_id !== 6) :
+				?>
+					<div class="cat-nav-list-end">
+						<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>"><span><?php echo esc_html($cat_end->name); ?>過去のイベント一覧</span></a>
+					</div>
+				<?php endif; ?>
 			</div>
 			<div class="event-wrap">
 
@@ -68,7 +79,7 @@ get_header();
 	<?php else : ?>
 		<div class="event-nothing">
 			<div class="container">
-				<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+				<p><?php esc_html_e('現在表示可能なイベントはありません'); ?></p>
 			</div>
 		</div>
 	<?php endif; ?>

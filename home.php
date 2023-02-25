@@ -9,6 +9,9 @@
  */
 
 get_header();
+$tax_id = get_query_var('cat');
+$post_type = get_query_var('post_type');
+$cat_name = get_category($tax_id)->cat_name;
 ?>
 
 <main id="primary" class="site-main">
@@ -31,14 +34,25 @@ get_header();
 	?>
 		<div class="container">
 			<div class="cat-nav">
-				<div class="cat-nav-list current">
-					<a class="italic" href="<?php echo esc_url(home_url('/event/')); ?>"><span>ALL</span></a>
-				</div>
-				<?php foreach ($categories as $cat) : ?>
-					<div class="cat-nav-list">
-						<a href="<?php echo esc_url(home_url('/category/') . $cat->slug); ?>"><span><?php echo esc_html($cat->name); ?></span></a>
+				<div class="cat-nav-wrap">
+					<div class="cat-nav-list current">
+						<a class="italic" href="<?php echo esc_url(home_url('/event/')); ?>"><span>ALL</span></a>
 					</div>
-				<?php endforeach; ?>
+					<?php foreach ($categories as $cat) : ?>
+						<div class="cat-nav-list">
+							<a href="<?php echo esc_url(home_url('/category/') . $cat->slug); ?>"><span><?php echo esc_html($cat->name); ?></span></a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+				<?php
+				$cat_end = get_category(6);
+				if ($cat_end->count > 0 && $tax_id !== 6) :
+				?>
+					<div class="cat-nav-list-end">
+						<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>"><span><?php echo esc_html($cat_end->name); ?>イベントはこちら</span></a>
+
+					</div>
+				<?php endif; ?>
 			</div>
 
 			<div class="event-wrap">

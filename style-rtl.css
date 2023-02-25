@@ -68,8 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   text-size-adjust: 100%;
   text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -139,7 +138,6 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   text-decoration: underline dotted;
   border-bottom: none;
@@ -244,8 +242,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
-  -moz-appearance: button;
+  appearance: button;
   appearance: button;
   appearance: button;
   appearance: button;
@@ -332,8 +329,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type='search'] {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
+  appearance: textfield;
   appearance: textfield;
   appearance: textfield;
   appearance: textfield;
@@ -345,7 +341,6 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
   appearance: none;
   appearance: none;
 }
@@ -355,7 +350,6 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
   appearance: button;
   appearance: button;
   font: inherit;
@@ -925,7 +919,6 @@ textarea {
   margin: -1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   clip-path: inset(50%);
   word-wrap: normal !important;
@@ -941,7 +934,6 @@ textarea {
   height: auto;
   padding: 15px 23px 14px;
   clip: auto !important;
-  -webkit-clip-path: none;
   clip-path: none;
   clip-path: none;
   font-size: 0.875rem;

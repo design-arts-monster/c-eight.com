@@ -55,7 +55,7 @@
 
 		<div class="event-wrap">
 			<?php
-
+			// $has_post = false;
 			$the_query = new WP_Query(array(
 				'post_type' => 'post',
 				'category__not_in' => array(6),
@@ -64,7 +64,9 @@
 				'orderby' => 'meta_value',
 				'order' => 'ASC',
 			)); ?>
-			<?php if ($the_query->have_posts()) : ?>
+			<?php if ($the_query->have_posts()) :
+				// $has_post = true;
+			?>
 				<!-- pagination here -->
 
 				<div class="event-slider is-style-carousel">
@@ -90,10 +92,18 @@
 			<?php endif; ?>
 		</div>
 
+		<?php $cat_end = get_category(6); ?>
 		<div class="event-buttons wp-block-buttons container">
-			<div class="wp-block-button is-style-parallelogram">
-				<a href="<?php echo esc_url(home_url('/event/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>イベント一覧はこちら</strong></a>
-			</div>
+			<?php if ($has_post) : ?>
+				<div class="wp-block-button is-style-parallelogram">
+					<a href="<?php echo esc_url(home_url('/event/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>イベント一覧はこちら</strong></a>
+				</div>
+
+			<?php elseif ($cat_end->count > 0) :	?>
+				<div class="wp-block-button is-style-parallelogram">
+					<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>過去のイベント一覧はこちら</strong></a>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </main><!-- #main -->
