@@ -415,11 +415,16 @@
 
   .information {
     position: relative;
-    padding-top: 650px;
-    margin-top: -710px;
+    padding-top: 800px;
+    margin-top: -860px;
     overflow: hidden;
 
     @include mq-down('md') {
+      padding-top: 490px;
+      margin-top: -520px;
+    }
+
+    @include mq-down('sm') {
       padding-top: 400px;
       margin-top: -400px;
     }
