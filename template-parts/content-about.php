@@ -159,7 +159,7 @@
 							</tr>
 							<tr>
 								<th>URL</th>
-								<td>http://yama-syou0204.jp/</td>
+								<td><a href="http://yama-syou0204.jp/" target="_blank">http://yama-syou0204.jp/</a></td>
 							</tr>
 							<tr>
 								<th>許可</th>

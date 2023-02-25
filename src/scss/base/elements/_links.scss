@@ -24,3 +24,10 @@
     }
   }
 }
+
+a[target='_blank'] {
+  &::after {
+    margin-left: 0.5em;
+    content: url('./img/icon/link/link.svg');
+  }
+}

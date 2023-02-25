@@ -464,6 +464,12 @@
           margin-top: 110px;
         }
       }
+
+      .event-infomation {
+        a {
+          color: map.get($colors, 'main');
+        }
+      }
     }
   }
 }

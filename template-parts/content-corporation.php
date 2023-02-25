@@ -170,7 +170,7 @@
 					<div class="container">
 						<div class="features-content-inner">
 							<h3 class="features-content-caption"><span class="num">02</span><span>ビジネスで重要視される<br>アスリートマインド</span></h3>
-							<p class="features-content-text">アスリートは競技を通して多彩な能力を鍛えています。それは、成長意欲、集中力、精神力、目標達成意識、協調性、規律性、冒険心など多岐にわたります。これは、ビジネスにおいても非常に重要視されているところであり、一般の方にはない、強く強靭なものをアスリートは育んでいます。</p>
+							<p class="features-content-text">アスリートは競技を通して多彩な能力を鍛えています。それは、成長意欲、集中力、精神力、目標達成意識、協調性、規律性、冒険心など多岐にわたります。これは、ビジネスにおいても非常に重要視されているところであり、一般の方にはない、強く強靭なものをアスリートは育んでいます。<br>&nbsp;</p>
 						</div>
 					</div>
 				</div>
@@ -228,7 +228,7 @@
 					<div class="step">
 						<p class="step-num">STEP 03</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-3.svg" alt="">
+							<img class="m-l-16" src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-3.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">

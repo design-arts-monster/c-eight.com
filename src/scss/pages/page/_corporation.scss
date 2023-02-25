@@ -281,6 +281,7 @@
           .container {
             position: relative;
             display: flex;
+            column-gap: 2%;
             align-items: stretch;
             justify-content: center;
             padding: 0;
@@ -322,7 +323,7 @@
             .merit-content-info {
               position: relative;
               z-index: 2;
-              width: 73%;
+              width: 71%;
               padding-top: 10px;
               padding-bottom: 50px;
 
@@ -530,8 +531,8 @@
               position: relative;
               z-index: 1;
               max-width: 780px;
-              padding-top: 45px;
-              padding-bottom: 45px;
+              padding-top: 25px;
+              padding-bottom: 65px;
               padding-left: 80px;
 
               @include mq-down('md') {

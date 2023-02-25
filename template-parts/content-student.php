@@ -175,7 +175,7 @@
 					<div class="step">
 						<p class="step-num">STEP 02</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-2.svg" alt="">
+							<img class="m-l-16" src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-2.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
