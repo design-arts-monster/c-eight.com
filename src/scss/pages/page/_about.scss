@@ -1,0 +1,464 @@
+.page.page-slug-about {
+  .site-main {
+    ~ .footer-cta {
+      .title {
+        color: map.get($colors, 'white') !important;
+        opacity: 0.15;
+      }
+    }
+  }
+
+  .caption {
+    position: relative;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    &.line {
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 30px;
+        left: calc(-100vw - 20px);
+        z-index: 1;
+        display: block;
+        width: 100vw;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background-color: map.get($colors, 'text-main');
+      }
+    }
+
+    @include mq-down('md') {
+      font-size: 40px;
+    }
+
+    > span {
+      display: block;
+      margin-top: 20px;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+
+      @include mq-down('md') {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .business-philosophy {
+    padding-top: 60px;
+    background-color: map.get($colors, 'text-main');
+
+    .philosophy-title {
+      color: map.get($colors, 'white');
+    }
+
+    .business-contribution {
+      margin-top: 50px;
+
+      .business-contribution-caption {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        max-width: 970px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-weight: 700;
+        text-align: left;
+
+        // &::after {
+        //   position: absolute;
+        //   top: 0;
+        //   right: 735px;
+        //   bottom: 0;
+        //   z-index: 1;
+        //   display: block;
+        //   width: 100vw;
+        //   height: 1px;
+        //   margin: auto;
+        //   content: '';
+        //   background-color: map.get($colors, 'white');
+        // }
+
+        @include mq-down('md') {
+          max-width: 86%;
+          padding-top: 16px;
+          padding-bottom: 20px;
+          margin-top: 0;
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+
+        > .text {
+          position: relative;
+          z-index: 2;
+          font-size: 88px;
+          font-style: italic;
+          line-height: 1;
+          color: map.get($colors, 'white');
+
+          @include mq-down('md') {
+            font-size: 40px;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          right: -8%;
+          bottom: 0;
+          z-index: 1;
+          display: block;
+          width: calc(100vw + 8%);
+          max-width: calc(970px + 30vw);
+          content: '';
+          background: map.get($gradients, 'yellow-orange-red');
+          transform: skewX(-15deg);
+        }
+      }
+    }
+
+    .philosophy {
+      height: 400px;
+      color: map.get($colors, 'white');
+      background: url('img/pages/about/philosophy.svg') no-repeat map.get($colors, 'text-main') center;
+      background-size: contain;
+
+      @include mq-down('md') {
+        height: 440px;
+        background-image: url('img/pages/about/philosophy@md.svg');
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .contribution {
+        display: inline-flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 37px;
+        font-size: 26px;
+        font-weight: 700;
+
+        @include mq-down('md') {
+          flex-wrap: wrap;
+          font-size: 16px;
+        }
+      }
+
+      .contribution-caption {
+        margin-bottom: 34px;
+        font-size: 44px;
+        font-weight: 700;
+
+        @include mq-down('md') {
+          margin-bottom: 50px;
+          font-size: 28px;
+          text-align: center;
+        }
+      }
+
+      .contribution-connect {
+        display: flex;
+        align-items: center;
+
+        @include mq-down('md') {
+          font-size: 14px;
+        }
+
+        &::before {
+          display: inline-block;
+          width: 3.281vw;
+          height: 1px;
+          margin-right: 15px;
+          content: '';
+          background-color: map.get($colors, 'white');
+        }
+      }
+    }
+  }
+
+  .vision {
+    padding-top: 120px;
+    padding-bottom: 300px;
+    background: url('img/pages/about/vision.png') no-repeat top right;
+    background-size: 46%;
+
+    @include mq-down('sm') {
+      padding-top: 320px;
+      padding-bottom: 80px;
+      background: url('img/pages/about/vision@md.png') no-repeat top center;
+      background-size: contain;
+    }
+
+    .vision-wrap {
+      .vision-content {
+        margin-top: 40px;
+
+        p {
+          font-size: 19px;
+          line-height: 1.8;
+
+          @include mq-down('md') {
+            font-size: 14px;
+          }
+        }
+
+        .vision-heading {
+          margin-top: 86px;
+          margin-bottom: 40px;
+
+          @include mq-down('md') {
+            margin-top: 40px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .mission {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 300px;
+    margin-top: -250px;
+    overflow: hidden;
+
+    @include mq-down('md') {
+      padding-top: 80px;
+      padding-bottom: 120px;
+      margin-top: -80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      bottom: 0;
+      left: -8%;
+      display: block;
+      width: 200vw;
+      content: '';
+      background-color: map.get($colors, 'gray-light');
+      transform: rotate(-16deg);
+
+      @include mq-down('md') {
+        left: -70%;
+        width: 300vw;
+      }
+    }
+
+    .mission-wrap {
+      position: relative;
+      z-index: 2;
+
+      .mission-content {
+        @include mq-down('md') {
+          margin-top: 30px;
+        }
+
+        .mission-item {
+          display: flex;
+          align-items: stretch;
+
+          &:nth-of-type(2) {
+            margin-top: -120px;
+
+            @include mq-down('md') {
+              margin-top: -20px;
+            }
+          }
+
+          &:nth-of-type(3) {
+            margin-top: -90px;
+
+            @include mq-down('md') {
+              margin-top: -20px;
+            }
+          }
+
+          &:nth-of-type(4) {
+            margin-top: -30px;
+
+            @include mq-down('md') {
+              margin-top: -20px;
+            }
+          }
+
+          &::before {
+            display: block;
+            width: 50%;
+            content: '';
+
+            @include mq-down('md') {
+              width: 13%;
+            }
+          }
+
+          &:nth-of-type(even) {
+            &::before {
+              content: none;
+            }
+
+            &::after {
+              display: block;
+              width: 50%;
+              content: '';
+
+              @include mq-down('md') {
+                width: 13%;
+              }
+            }
+
+            .mission-item-wrap {
+              max-width: 340px;
+
+              &::after {
+                right: -100px;
+                left: auto;
+
+                @include mq-down('md') {
+                  right: -30px;
+                  left: auto;
+                }
+              }
+            }
+
+            .mission-item-heading {
+              .num {
+                @include mq-down('md') {
+                  transform: translate(83%, -20px);
+                }
+              }
+            }
+          }
+
+          .mission-item-wrap {
+            position: relative;
+            width: 50%;
+            max-width: 390px;
+            padding-bottom: 60px;
+
+            @include mq-down('md') {
+              width: 87%;
+            }
+
+            &::after {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: -100px;
+              z-index: 1;
+              display: block;
+              width: 100vw;
+              content: '';
+              background-color: map.get($colors, 'white');
+              box-shadow: 0 3px 20px #0000001a;
+
+              @include mq-down('md') {
+                left: -30px;
+              }
+            }
+          }
+
+          .mission-item-heading {
+            position: relative;
+            z-index: 2;
+
+            .num {
+              font-size: 110px;
+              font-style: italic;
+              font-weight: 700;
+              line-height: 1;
+              color: map.get($colors, 'main');
+              transform: translateY(-40px);
+
+              @include mq-down('md') {
+                font-size: 72px;
+                transform: translate(-50px, -20px);
+              }
+            }
+
+            .mission-item-heading-caption {
+              margin-bottom: 20px;
+              font-size: 29px;
+              font-weight: 700;
+              line-height: 1;
+              color: map.get($colors, 'main');
+
+              @include mq-down('md') {
+                font-size: 24px;
+              }
+            }
+          }
+
+          .misson-item-content {
+            position: relative;
+            z-index: 2;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+
+  .information {
+    position: relative;
+    padding-top: 650px;
+    margin-top: -710px;
+    overflow: hidden;
+
+    @include mq-down('md') {
+      padding-top: 400px;
+      margin-top: -400px;
+    }
+
+    .information-wrap {
+      padding-bottom: 320px;
+      background-color: map.get($colors, 'main');
+
+      @include mq-down('md') {
+        padding-bottom: 260px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 200vw;
+        content: '';
+        background-color: map.get($colors, 'main');
+        transform: rotate(-15deg);
+      }
+
+      .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .caption {
+        margin-bottom: 50px;
+        color: map.get($colors, 'white');
+
+        &:not(:first-of-type) {
+          margin-top: 110px;
+        }
+      }
+    }
+  }
+}
