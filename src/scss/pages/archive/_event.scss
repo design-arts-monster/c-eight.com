@@ -1,4 +1,5 @@
-.blog {
+.blog,
+.archive {
   .site-main {
     padding-bottom: 320px;
 
@@ -51,6 +52,7 @@
         font-weight: 700;
         color: map.get($colors, 'main');
         text-align: center;
+        text-decoration: none;
         background-color: map.get($colors, 'white');
         border-top: 1px solid map.get($colors, 'main');
         border-bottom: 1px solid map.get($colors, 'main');
