@@ -200,6 +200,11 @@
               margin-bottom: 10px;
               line-height: 1;
 
+              a {
+                color: map.get($colors, 'main');
+                text-decoration: none;
+              }
+
               @include mq-down('md') {
                 font-size: 2.625rem !important;
               }
