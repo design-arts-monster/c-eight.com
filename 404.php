@@ -16,12 +16,20 @@ get_header();
 	<section class="error-404 not-found">
 		<div class="container">
 			<header class="page-header">
-				<h1 class="page-title">お探しのページは見つかりませんでした。</h1>
+				<h1 class="page-title" data-desc="NOT FOUND">404</h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p>サイト更新などによってURLが変更になったか、URLが正しく入力されていない可能性があります。<br>
-					ブラウザの再読込を行ってもこのページが表示される場合は、トップページからお探し下さい。</p>
+				<p>あなたのプレーは失敗に終わりました。<br>
+					もう一度やり直すチャンスがあります。<br>
+					リクエストしますか？</p>
+			</div>
+
+
+			<div class="error-buttons wp-block-buttons container">
+				<div class="wp-block-button is-style-parallelogram">
+					<a href="<?php echo esc_url(home_url('/')); ?>" class="wp-block-button__link has-text-main-background-color wp-element-button"><strong>Not. Start again.</strong></a>
+				</div>
 			</div>
 		</div><!-- .page-content -->
 	</section><!-- .error-404 -->
