@@ -149,7 +149,11 @@
 
         &:nth-of-type(even) {
           .support-content-img {
-            margin-left: auto;
+            justify-content: flex-end;
+
+            @include mq-down('md') {
+              margin-left: auto;
+            }
           }
 
           .support-content-wrap {

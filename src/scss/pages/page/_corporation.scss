@@ -1,0 +1,725 @@
+.page.page-slug-corporation {
+  .site-main {
+    padding-bottom: 320px;
+
+    @include mq-down('md') {
+      padding-bottom: 260px;
+    }
+
+    ~ .footer-cta {
+      .title {
+        color: #f5f5f5 !important;
+      }
+    }
+  }
+
+  .caption {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include mq-down('md') {
+      font-size: 40px;
+    }
+
+    > span {
+      display: block;
+      margin-top: 20px;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1;
+
+      @include mq-down('md') {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .vitality {
+    .vitality-caption {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      max-width: 750px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-weight: 700;
+      text-align: left;
+
+      // &::after {
+      //   position: absolute;
+      //   top: 0;
+      //   right: 735px;
+      //   bottom: 0;
+      //   z-index: 1;
+      //   display: block;
+      //   width: 100vw;
+      //   height: 1px;
+      //   margin: auto;
+      //   content: '';
+      //   background-color: map.get($colors, 'white');
+      // }
+
+      @include mq-down('md') {
+        max-width: 86%;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      > .text {
+        position: relative;
+        z-index: 2;
+        font-size: 40px;
+        color: map.get($colors, 'white');
+
+        @include mq-down('md') {
+          font-size: 20px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: -8%;
+        bottom: 0;
+        z-index: 1;
+        display: block;
+        width: calc(100vw + 8%);
+        max-width: calc(700px + 30vw);
+        content: '';
+        background: map.get($gradients, 'yellow-orange-red');
+        transform: skewX(-15deg);
+      }
+    }
+
+    .vitality-content {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      margin-top: -90px;
+      font-size: 21px;
+      line-height: 1.7;
+      color: map.get($colors, 'white');
+      background-color: map.get($colors, 'main');
+
+      @include mq-down('md') {
+        padding-top: 97px;
+        padding-bottom: 43px;
+        margin-top: -80px;
+        font-size: 14px;
+      }
+
+      .vitality-container {
+        max-width: 900px;
+        margin: auto;
+      }
+    }
+  }
+
+  .recruitment {
+    padding-top: 200px;
+    padding-bottom: 300px;
+    overflow: hidden;
+    background-color: map.get($colors, 'gray-light');
+
+    @include mq-down('md') {
+      padding-top: 80px;
+      padding-bottom: 145px;
+    }
+
+    .recruitment-caption {
+      position: relative;
+      margin-bottom: 80px;
+      font-size: 72px;
+      font-weight: 700;
+      text-align: center;
+
+      @include mq-down('md') {
+        margin-bottom: 40px;
+        font-size: 40px;
+      }
+
+      .text {
+        position: relative;
+        z-index: 2;
+      }
+
+      .desc {
+        position: absolute;
+        top: -90px;
+        left: 0;
+        z-index: 1;
+        display: block;
+        margin: auto;
+        font-size: 163px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1;
+        color: map.get($colors, 'white');
+
+        @include mq-down('md') {
+          top: -90%;
+          right: 0;
+          left: 0;
+          font-size: 66px;
+          text-align: left;
+        }
+      }
+    }
+
+    .recruitment-wrap {
+      p {
+        margin-bottom: 1.7em;
+        font-size: 21px;
+        line-height: 1.7;
+
+        @include mq-down('md') {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .merit {
+    padding-top: 245px;
+    padding-bottom: 445px;
+    margin-top: -245px;
+    overflow: hidden;
+
+    .merit-wrap {
+      position: relative;
+      background-color: map.get($colors, 'main');
+
+      &::before,
+      &::after {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 200vw;
+        content: '';
+        background-color: map.get($colors, 'main');
+      }
+
+      &::before {
+        top: -30px;
+        bottom: 50%;
+        left: -10%;
+        transform: rotate(7deg);
+
+        @include mq-down('md') {
+          left: -20%;
+        }
+
+        @include mq-down('sm') {
+          left: -50%;
+        }
+      }
+
+      &::after {
+        top: 50%;
+        bottom: -100px;
+        left: -20%;
+        transform: rotate(-9.5deg);
+
+        @include mq-down('md') {
+          left: -50%;
+        }
+      }
+
+      .caption {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 120px;
+        color: map.get($colors, 'white');
+
+        @include mq-down('md') {
+          margin-bottom: 40px;
+        }
+      }
+
+      .merit-content-wrap {
+        position: relative;
+        z-index: 2;
+
+        .merit-content {
+          &:not(:first-of-type) {
+            margin-top: 80px;
+          }
+
+          &:nth-of-type(even) {
+            .container {
+              &::after {
+                right: 0;
+                left: auto;
+              }
+
+              .merit-content-img {
+                order: 2;
+                transform: translate(30px, -40px);
+
+                @include mq-down('md') {
+                  order: 1;
+                  transform: none;
+                  transform: translate(-20px, 0);
+                }
+              }
+
+              .merit-content-info {
+                order: 1;
+
+                @include mq-down('md') {
+                  order: 2;
+                }
+              }
+            }
+          }
+
+          .container {
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            padding: 0;
+
+            @include mq-down('md') {
+              display: block;
+              padding-right: 20px;
+              padding-left: 20px;
+            }
+
+            &::after {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              z-index: 1;
+              display: block;
+              width: 100vw;
+              content: '';
+              background-color: map.get($colors, 'white');
+
+              @include mq-down('md') {
+                top: 25vw;
+              }
+            }
+
+            .merit-content-img {
+              position: relative;
+              z-index: 2;
+              width: 27%;
+              transform: translate(-30px, -40px);
+
+              @include mq-down('md') {
+                width: calc(100% + 20px);
+                transform: translate(0, 0);
+              }
+            }
+
+            .merit-content-info {
+              position: relative;
+              z-index: 2;
+              width: 73%;
+              padding-top: 10px;
+              padding-bottom: 50px;
+
+              @include mq-down('md') {
+                width: 100%;
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-top: -50px;
+              }
+
+              .merit-content-title {
+                font-size: 40px;
+                font-weight: 700;
+
+                @include mq-down('md') {
+                  font-size: 32px;
+                }
+
+                .merit-num {
+                  position: relative;
+                  display: inline-flex;
+                  align-items: baseline;
+                  padding: 5px 30px 5px 10px;
+                  font-style: italic;
+                  line-height: 1;
+
+                  &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    margin: auto;
+                    content: '';
+                    background-color: map.get($colors, 'yellow');
+                    transform: skewX(-9deg);
+                  }
+
+                  .text {
+                    position: relative;
+                    z-index: 2;
+                    font-size: 17px;
+                  }
+
+                  .num {
+                    position: relative;
+                    z-index: 2;
+                    margin-left: 0.3em;
+                    font-size: 25px;
+                  }
+                }
+
+                .merit-text {
+                  display: block;
+                  margin-bottom: 10px;
+
+                  .strong {
+                    color: map.get($colors, 'main');
+                  }
+                }
+              }
+
+              .merit-content-text {
+                font-size: 20px;
+
+                @include mq-down('md') {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .features {
+    position: relative;
+    padding-top: 400px;
+    padding-bottom: 380px;
+    margin-top: -400px;
+    overflow: hidden;
+
+    @include mq-down('md') {
+      padding-bottom: 150px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 50%;
+      left: 0;
+      z-index: 0;
+      display: block;
+      content: '';
+      background-color: map.get($colors, 'gray-light');
+    }
+
+    .caption {
+      position: relative;
+      z-index: 2;
+      text-align: right;
+    }
+
+    .features-wrap {
+      background-color: map.get($colors, 'gray-light');
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        bottom: 1%;
+        left: 0;
+        display: block;
+        width: 200vw;
+        content: '';
+        background-color: map.get($colors, 'gray-light');
+        transform: rotate(8.5deg);
+
+        @include mq-down('md') {
+          transform: rotate(15.3deg);
+        }
+      }
+
+      @include mq-down('md') {
+        margin-top: 40px;
+      }
+
+      .features-content {
+        position: relative;
+
+        &:not(:first-of-type) {
+          margin-top: 60px;
+        }
+
+        &:nth-of-type(even) {
+          .features-content-img {
+            justify-content: flex-end;
+
+            @include mq-down('md') {
+              margin-left: auto;
+            }
+          }
+
+          .features-content-wrap {
+            .container {
+              justify-content: flex-start;
+
+              .features-content-inner {
+                padding-right: 80px;
+                padding-left: 0;
+
+                @include mq-down('md') {
+                  padding-right: 20px;
+                }
+
+                &::after {
+                  right: -8%;
+                  left: auto;
+                  transform: skewX(-15deg);
+
+                  @include mq-down('md') {
+                    right: 9%;
+                    transform: skewX(-10deg);
+                  }
+                }
+
+                .features-content-text {
+                  @include mq-down('md') {
+                    padding-right: 50px;
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .features-content-img {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          justify-content: flex-start;
+
+          @include mq-down('md') {
+            max-width: 90%;
+          }
+        }
+
+        .features-content-wrap {
+          position: relative;
+          z-index: 2;
+          margin-top: -400px;
+
+          @include mq-down('md') {
+            margin-top: -20px;
+          }
+
+          .container {
+            display: flex;
+            justify-content: flex-end;
+
+            .features-content-inner {
+              position: relative;
+              z-index: 1;
+              max-width: 780px;
+              padding-top: 45px;
+              padding-bottom: 45px;
+              padding-left: 80px;
+
+              @include mq-down('md') {
+                padding-top: 20px;
+                padding-bottom: 30px;
+                padding-left: 20px;
+              }
+
+              &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -8%;
+                z-index: 1;
+                display: block;
+                width: calc(100vw + 80px);
+                content: '';
+                background-color: map.get($colors, 'white');
+                box-shadow: 0 3px 20px #00000029;
+                transform: skewX(15deg);
+
+                @include mq-down('md') {
+                  left: 9%;
+                  transform: skewX(10deg);
+                }
+              }
+
+              .features-content-caption {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                column-gap: 20px;
+                align-items: flex-end;
+                margin-bottom: 30px;
+                font-size: 40px;
+                line-height: 1.25;
+                color: map.get($colors, 'main');
+
+                @include mq-down('md') {
+                  margin-bottom: 20px;
+                  font-size: 20px;
+                }
+
+                .num {
+                  font-size: 120px;
+                  font-style: italic;
+                  line-height: 1;
+
+                  @include mq-down('md') {
+                    font-size: 62px;
+                  }
+                }
+              }
+
+              .features-content-text {
+                position: relative;
+                z-index: 2;
+                font-size: 18px;
+                line-height: 1.8;
+
+                @include mq-down('md') {
+                  padding-left: 50px;
+                  font-size: 14px;
+                  line-height: 1.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .flow {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    .caption {
+      margin-bottom: 78px;
+
+      .free {
+        padding: 5px 10px;
+        margin-left: 20px;
+        font-size: 17px;
+        font-style: normal;
+        line-height: 1.35;
+        color: map.get($colors, 'text-main');
+        background-color: map.get($colors, 'yellow');
+
+        @include mq-down('md') {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .flow-wrap {
+      .flow-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        &:first-child {
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100vw;
+            height: 1px;
+            content: '';
+            background-color: map.get($colors, 'main');
+
+            @include mq-down('md') {
+              width: 100%;
+            }
+          }
+        }
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100vw;
+          height: 1px;
+          content: '';
+          background-color: map.get($colors, 'main');
+
+          @include mq-down('md') {
+            width: 100%;
+          }
+        }
+
+        .step {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 25.5%;
+          text-align: center;
+
+          @include mq-down('md') {
+            width: 33%;
+          }
+
+          .step-num {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 32px;
+            font-weight: 700;
+            color: map.get($colors, 'main');
+
+            @include mq-down('md') {
+              font-size: 21px;
+            }
+          }
+        }
+
+        .flow-content {
+          width: 74.5%;
+          padding-left: 20px;
+
+          @include mq-down('md') {
+            width: 67%;
+          }
+
+          .flow-title {
+            margin-bottom: 15px;
+            font-size: 36px;
+            font-weight: 700;
+
+            @include mq-down('md') {
+              font-size: 21px;
+            }
+          }
+
+          .flow-text {
+            font-size: 21px;
+
+            @include mq-down('md') {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 80px;
+  overflow: hidden;
 
   @include mq-down('md') {
     flex-flow: column;
