@@ -73,6 +73,14 @@ register_block_style(
 register_block_style(
     'core/paragraph',
     array(
+        'name'         => 'notes',
+        'label'        => '注釈',
+        'style_handle' => 'custom-block-style',
+    )
+);
+register_block_style(
+    'core/paragraph',
+    array(
         'name'         => 'parallelogram',
         'label'        => '平行四辺形',
         'style_handle' => 'custom-block-style',

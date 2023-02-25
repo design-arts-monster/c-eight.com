@@ -1,4 +1,11 @@
 p {
+  // 注釈
+  &.is-style-notes {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: map.get($colors, 'gray');
+  }
+
   // 平行四辺形
   &.is-style-parallelogram {
     position: relative;

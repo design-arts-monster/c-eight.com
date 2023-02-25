@@ -88,7 +88,7 @@
 
 
 	<div class="entry-content">
-		<div class="container">
+		<div class="container block-editor">
 			<?php
 			the_content(
 				sprintf(

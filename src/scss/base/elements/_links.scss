@@ -1,22 +1,26 @@
-a {
-  color: map.get($colors, 'link');
+.container.block-editor {
+  a {
+    color: map.get($colors, 'main');
+    text-decoration: underline;
 
-  // &:visited {
-  //   color: map.get($colors, 'link-visited');
-  // }
+    // &:visited {
+    //   color: map.get($colors, 'link-visited');
+    // }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: map.get($colors, 'main-light');
-  }
+    &:hover,
+    &:focus,
+    &:active {
+      color: map.get($colors, 'main');
+      text-decoration: none;
+    }
 
-  &:focus {
-    outline: thin dotted;
-  }
+    &:focus {
+      outline: thin dotted;
+    }
 
-  &:hover,
-  &:active {
-    outline: 0;
+    &:hover,
+    &:active {
+      outline: 0;
+    }
   }
 }

@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content<?php echo (!(is_front_page() || is_home())) ? '' : ' m-t-0'; ?>">
-		<div class="container">
+		<div class="container block-editor">
 			<?php
 			the_content();
 

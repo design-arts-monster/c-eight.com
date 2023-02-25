@@ -1,51 +1,75 @@
-p {
-  margin-bottom: 1.5em;
-}
+.container.block-editor {
+  p {
+    margin-bottom: 1.5em;
+    line-height: 1.875;
 
-dfn,
-cite,
-em,
-i {
-  font-style: italic;
-}
+    @include mq-down('md') {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
 
-blockquote {
-  margin: 0 1.5em;
-}
+  dfn,
+  cite,
+  em,
+  i {
+    font-style: italic;
+  }
 
-address {
-  margin: 0 0 1.5em;
-}
+  blockquote {
+    position: relative;
+    padding: 2.5em;
+    margin: 0;
+    background: map.get($colors, 'gray-light');
+    border: none;
 
-pre {
-  max-width: 100%;
-  padding: 1.6em;
-  margin-bottom: 1.6em;
-  overflow: auto;
-  font-family: $font-pre;
-  line-height: $font-line-height-pre;
-  background: map.get($colors, 'background-pre');
-}
+    &::before {
+      position: absolute;
+      top: 0.2em;
+      left: 0.3125em;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      color: map.get($colors, 'main');
+      content: '"';
+    }
+  }
 
-code,
-kbd,
-tt,
-var {
-  font-family: $font-code;
-}
+  address {
+    margin: 0 0 1.5em;
+  }
 
-abbr,
-acronym {
-  cursor: help;
-  border-bottom: 1px dotted map.get($colors, 'border-abbr');
-}
+  pre {
+    max-width: 100%;
+    padding: 1.6em;
+    margin-bottom: 1.6em;
+    overflow: auto;
+    font-family: $font-pre;
+    line-height: $font-line-height-pre;
+    background: map.get($colors, 'white');
+    border: 1px solid map.get($colors, 'main');
+  }
 
-mark,
-ins {
-  text-decoration: none;
-  background: map.get($colors, 'background-ins');
-}
+  code,
+  kbd,
+  tt,
+  var {
+    font-family: $font-code;
+  }
 
-big {
-  font-size: 125%;
+  abbr,
+  acronym {
+    cursor: help;
+    border-bottom: 1px dotted map.get($colors, 'border-abbr');
+  }
+
+  mark,
+  ins {
+    text-decoration: none;
+    background: map.get($colors, 'background-ins');
+  }
+
+  big {
+    font-size: 125%;
+  }
 }
