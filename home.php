@@ -21,7 +21,7 @@ $cat_name = get_category($tax_id)->cat_name;
 			<span>開催予定のイベント</span>
 		</h1>
 		<div class="thumbnail">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/pages/event/thumbnail.jpg" alt="EVENT LIST">
+			<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/event/thumbnail.jpg" alt="EVENT LIST">
 		</div>
 	</header><!-- .page-header -->
 
@@ -80,7 +80,7 @@ $cat_name = get_category($tax_id)->cat_name;
 	<?php else : ?>
 		<div class="event-nothing">
 			<div class="container">
-				<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+				<p><?php esc_html_e('現在開催予定のイベントはありません', 'whitebase'); ?></p>
 			</div>
 		</div>
 	<?php endif; ?>

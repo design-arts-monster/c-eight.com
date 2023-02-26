@@ -86,7 +86,7 @@
 			<?php else : ?>
 				<div class="event-nothing">
 					<div class="container">
-						<p><?php esc_html_e('現在開催予定のイベントはありません'); ?></p>
+						<p><?php esc_html_e('現在開催予定のイベントはありません', 'whitebase'); ?></p>
 					</div>
 				</div>
 			<?php endif; ?>

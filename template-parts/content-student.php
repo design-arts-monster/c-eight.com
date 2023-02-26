@@ -83,7 +83,7 @@
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
 							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/man.png" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/man.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
@@ -100,7 +100,7 @@
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
 							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/woman.png" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/woman.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
@@ -119,7 +119,7 @@
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
 							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/man.png" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/man.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
@@ -136,7 +136,7 @@
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
 							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/woman.png" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/woman.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
@@ -163,7 +163,7 @@
 					<div class="step">
 						<p class="step-num">STEP 01</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-1.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-1.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -175,7 +175,7 @@
 					<div class="step">
 						<p class="step-num">STEP 02</p>
 						<div class="step-icon">
-							<img class="m-l-16" src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-2.svg" alt="">
+							<img class="m-l-16" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-2.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -187,7 +187,7 @@
 					<div class="step">
 						<p class="step-num">STEP 03</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-3.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-3.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -199,7 +199,7 @@
 					<div class="step">
 						<p class="step-num">STEP 04</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-4.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-4.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -211,7 +211,7 @@
 					<div class="step">
 						<p class="step-num">STEP 05</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-5.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-5.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -223,7 +223,7 @@
 					<div class="step">
 						<p class="step-num">STEP 06</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/student/step-6.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/step-6.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">

@@ -204,7 +204,7 @@
 					<div class="step">
 						<p class="step-num">STEP 01</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-1.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-1.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -216,7 +216,7 @@
 					<div class="step">
 						<p class="step-num">STEP 02</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-2.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-2.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -228,7 +228,7 @@
 					<div class="step">
 						<p class="step-num">STEP 03</p>
 						<div class="step-icon">
-							<img class="m-l-16" src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-3.svg" alt="">
+							<img class="m-l-16" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-3.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -240,7 +240,7 @@
 					<div class="step">
 						<p class="step-num">STEP 04</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-4.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-4.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -252,7 +252,7 @@
 					<div class="step">
 						<p class="step-num">STEP 05</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-5.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-5.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
@@ -264,7 +264,7 @@
 					<div class="step">
 						<p class="step-num">STEP 06</p>
 						<div class="step-icon">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/pages/corporation/step-6.svg" alt="">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/corporation/step-6.svg" alt="">
 						</div>
 					</div>
 					<div class="flow-content">
