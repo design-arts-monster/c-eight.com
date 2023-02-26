@@ -75,6 +75,7 @@ html {
   text-size-adjust: 100%;
   text-size-adjust: 100%;
   text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Sections
@@ -252,6 +253,7 @@ button,
   appearance: button;
   appearance: button;
   appearance: button;
+  appearance: button;
 }
 
 /**
@@ -337,6 +339,7 @@ textarea {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
+  appearance: textfield;
   appearance: textfield;
   appearance: textfield;
   appearance: textfield;
