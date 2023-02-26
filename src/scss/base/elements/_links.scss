@@ -1,22 +1,33 @@
-a {
-  color: map.get($colors, 'link');
+.container.block-editor {
+  a {
+    color: map.get($colors, 'main');
+    text-decoration: underline;
 
-  &:visited {
-    color: map.get($colors, 'link-visited');
+    // &:visited {
+    //   color: map.get($colors, 'link-visited');
+    // }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: map.get($colors, 'main');
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
+    }
   }
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: map.get($colors, 'link-hover');
-  }
-
-  &:focus {
-    outline: thin dotted;
-  }
-
-  &:hover,
-  &:active {
-    outline: 0;
+a[target='_blank'] {
+  &::after {
+    margin-left: 0.5em;
+    content: url('./img/icon/link/link.svg');
   }
 }

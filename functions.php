@@ -1,4 +1,5 @@
 <?php
+
 /**
  * whitebase functions and definitions
  *
@@ -7,9 +8,9 @@
  * @package c-eight.com
  */
 
-if ( ! defined( '_C_EIGHT_VERSION' ) ) {
+if (!defined('_C_EIGHT_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( '_C_EIGHT_VERSION', '1.0.0' );
+	define('_C_EIGHT_VERSION', '1.0.0');
 }
 
 /**
@@ -26,10 +27,10 @@ function whitebase_setup() {
 		* If you're building a theme based on whitebase, use a find and replace
 		* to change 'whitebase' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'whitebase', get_template_directory() . '/languages' );
+	load_theme_textdomain('whitebase', get_template_directory() . '/languages');
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	add_theme_support('automatic-feed-links');
 
 	/*
 		* Let WordPress manage the document title.
@@ -37,21 +38,21 @@ function whitebase_setup() {
 		* hard-coded <title> tag in the document head, and expect WordPress to
 		* provide it for us.
 		*/
-	add_theme_support( 'title-tag' );
+	add_theme_support('title-tag');
 
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails');
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'header-menu-pc' => esc_html__( 'Header Menu PC', 'whitebase' ),
-			'header-menu-sp' => esc_html__( 'Header Menu SP', 'whitebase' ),
-			'footer-menu' => esc_html__( 'Footer Menu', 'whitebase' ),
+			'header-menu-pc' => esc_html__('Header Menu PC', 'whitebase'),
+			'header-menu-sp' => esc_html__('Header Menu SP', 'whitebase'),
+			'footer-menu' => esc_html__('Footer Menu', 'whitebase'),
 		)
 	);
 
@@ -85,7 +86,7 @@ function whitebase_setup() {
 	);
 
 	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support('customize-selective-refresh-widgets');
 
 	/**
 	 * Add support for core custom logo.
@@ -102,7 +103,7 @@ function whitebase_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'whitebase_setup' );
+add_action('after_setup_theme', 'whitebase_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -112,9 +113,9 @@ add_action( 'after_setup_theme', 'whitebase_setup' );
  * @global int $content_width
  */
 function whitebase_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'whitebase_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters('whitebase_content_width', 640);
 }
-add_action( 'after_setup_theme', 'whitebase_content_width', 0 );
+add_action('after_setup_theme', 'whitebase_content_width', 0);
 
 /**
  * Register widget area.
@@ -124,7 +125,7 @@ add_action( 'after_setup_theme', 'whitebase_content_width', 0 );
 function whitebase_widgets_footer_cta() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer CTA', 'whitebase' ),
+			'name'          => esc_html__('Footer CTA', 'whitebase'),
 			'id'            => 'footer-cta',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -133,11 +134,11 @@ function whitebase_widgets_footer_cta() {
 		)
 	);
 }
-add_action( 'widgets_init', 'whitebase_widgets_footer_cta' );
+add_action('widgets_init', 'whitebase_widgets_footer_cta');
 function whitebase_widgets_sp_menu_contact() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'ハンバーガーメニュー CONTACT', 'whitebase' ),
+			'name'          => esc_html__('ハンバーガーメニュー CONTACT', 'whitebase'),
 			'id'            => 'sp-menu-contact',
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -146,37 +147,88 @@ function whitebase_widgets_sp_menu_contact() {
 		)
 	);
 }
-add_action( 'widgets_init', 'whitebase_widgets_sp_menu_contact' );
+add_action('widgets_init', 'whitebase_widgets_sp_menu_contact');
 
 /**
  * Enqueue scripts and styles.
  */
-function whitebase_scripts() {
-	wp_enqueue_style( 'whitebase-style', get_stylesheet_uri(), array(), _C_EIGHT_VERSION );
-	wp_style_add_data( 'whitebase-style', 'rtl', 'replace' );
-
-	// wp_enqueue_script( 'whitebase-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _C_EIGHT_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'whitebase_scripts' );
+require get_template_directory() . '/inc/enqueue.php';
 
 /**
  * ダッシュボード の投稿ページ用の CSS 読み込み
  */
-add_action( 'after_setup_theme', function(){
-	add_theme_support( 'wp-block-styles' );
-	add_theme_support( 'editor-styles' );
-	add_editor_style( 'block-editor-style.css' );
-} );
+add_action('after_setup_theme', function () {
+	add_theme_support('wp-block-styles');
+	add_theme_support('editor-styles');
+	add_editor_style('block-editor-style.css');
+});
 
-add_action( 'admin_enqueue_scripts', function ( $hook_suffix ) {
-	if ( 'post.php' === $hook_suffix || 'post-new.php' === $hook_suffix || 'widgets.php' === $hook_suffix ) {
-		wp_enqueue_style( 'block-editor-style', get_template_directory_uri() . '/block-editor-style.css' );
+add_action('admin_enqueue_scripts', function ($hook_suffix) {
+	if ('post.php' === $hook_suffix || 'post-new.php' === $hook_suffix || 'widgets.php' === $hook_suffix) {
+		wp_enqueue_style('block-editor-style', get_template_directory_uri() . '/block-editor-style.css');
 	}
 });
+
+/**
+ * body_classにスラッグを追加
+ * @see https://www.nxworld.net/wp-add-page-slug-body-class.html
+ */
+add_filter('body_class', 'add_page_slug_class_name');
+function add_page_slug_class_name($classes) {
+	if (is_page()) {
+		$page = get_post(get_the_ID());
+		$classes[] = 'page-slug-' . $page->post_name;
+
+		$parent_id = $page->post_parent;
+		if (0 == $parent_id) {
+			$classes[] = 'page-slug-' . get_post($parent_id)->post_name;
+		} else {
+			$progenitor_id = array_pop(get_ancestors($page->ID, 'page', 'post_type'));
+			$classes[] = 'page-slug-' . get_post($progenitor_id)->post_name . '-child';
+		}
+	}
+	return $classes;
+}
+
+/**
+ * mediaクエリ
+ */
+function get_media($size, $width = 'down') {
+	$breakepoint = array(
+		'up' => array(
+			'sm' => '(min-width: 520px)',
+			'md' => '(min-width: 960px)',
+			'lg' => '(min-width: 1280px)',
+			'xl' => '(min-width: 1367px)'
+		),
+		'down' => array(
+			'sm' => '(max-width: 519px)',
+			'md' => '(max-width: 959px)',
+			'lg' => '(max-width: 1279px)',
+			'xl' => '(max-width: 1366px)'
+		)
+	);
+	return $breakepoint[$width][$size];
+}
+
+/**
+ * 投稿アーカイブの並び順を変更
+ */
+function change_posts_per_page($query) {
+
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+
+	if ($query->is_home()) {
+		$query->set('meta_key', 'date');
+		$query->set('orderby', 'meta_value');
+		$query->set('order', 'ASC');
+		$query->set('category__not_in', array(6));
+		return;
+	}
+}
+add_action('pre_get_posts', 'change_posts_per_page');
 
 /**
  * Implement the Custom Header feature.
@@ -216,7 +268,20 @@ require get_template_directory() . '/inc/custom-block.php';
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
+if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * ContactForm7
+ */
+if (is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
+	require get_template_directory() . '/inc/contactform7.php';
+}
+
+/**
+ * Breadcrumb NavXT
+ */
+if (is_plugin_active('breadcrumb-navxt/breadcrumb-navxt.php')) {
+	require get_template_directory() . '/inc/breadcrumb-navxt.php';
+}

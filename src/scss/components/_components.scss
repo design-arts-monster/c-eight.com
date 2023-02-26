@@ -2,6 +2,7 @@
 --------------------------------------------- */
 @import 'parts/header';
 @import 'parts/footer';
+@import 'parts/pagination';
 
 /* Navigation
 --------------------------------------------- */
@@ -10,6 +11,8 @@
 /* Posts and pages
 --------------------------------------------- */
 @import 'content/posts-and-pages';
+@import 'content/event';
+@import 'content/thumb-header';
 
 /* Comments
 --------------------------------------------- */

@@ -1,26 +1,37 @@
-ul,
-ol {
-  margin: 0 0 1.5em 3em;
-}
+.container.block-editor {
+  ul,
+  ol {
+    margin: 0 0 1.5em 2em;
 
-ul {
-  list-style: disc;
-}
+    li {
+      line-height: 1.875;
 
-ol {
-  list-style: decimal;
-}
+      &::marker {
+        font-weight: 700;
+        color: map.get($colors, 'main');
+      }
+    }
+  }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
-}
+  ul {
+    list-style: disc;
+  }
 
-dt {
-  font-weight: 700;
-}
+  ol {
+    list-style: decimal-leading-zero;
+  }
 
-dd {
-  margin: 0 1.5em 1.5em;
+  li > ul,
+  li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0 1.5em 1.5em;
+  }
 }

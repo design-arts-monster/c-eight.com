@@ -32,4 +32,5 @@ $colors: (
 // グラデーション
 $gradients: (
   'yellow-orange-red': linear-gradient(100deg, map.get($colors, 'yellow') 0%, map.get($colors, 'orange') 60%, map.get($colors, 'red') 100%),
+  'yellow-orange-red-top': linear-gradient(214deg, map.get($colors, 'yellow') 0%, map.get($colors, 'orange') 60%, map.get($colors, 'red') 100%),
 );

@@ -1,0 +1,225 @@
+.wp-block-contact-form-7-contact-form-selector {
+  .content-wrap {
+    &:not(:first-of-type) {
+      margin-top: 70px;
+
+      @include mq-down('md') {
+        margin-top: 60px;
+      }
+    }
+
+    .heading {
+      margin-bottom: 30px;
+      color: map.get($colors, 'main');
+
+      @include mq-down('md') {
+        margin-bottom: 25px;
+      }
+
+      .caption {
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .notice {
+        margin-top: 5px;
+        font-size: 14px;
+        color: map.get($colors, 'gray');
+
+        @include mq-down('md') {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .required,
+    .optional {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      color: map.get($colors, 'text-main');
+
+      @include mq-down('md') {
+        margin-left: 15px;
+        font-size: 12px;
+      }
+    }
+
+    .required {
+      background-color: map.get($colors, 'yellow');
+    }
+
+    .optional {
+      background-color: map.get($colors, 'gray');
+    }
+
+    .row {
+      .input-box {
+        .wpcf7-checkbox,
+        .wpcf7-radio {
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 10px;
+
+          .wpcf7-list-item {
+            width: 50%;
+            margin: 0;
+
+            @include mq-down('md') {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.birthday {
+      .input-box {
+        display: flex;
+        column-gap: 20px;
+
+        @include mq-down('md') {
+          column-gap: 5px;
+        }
+
+        > span {
+          display: inline-flex;
+          column-gap: 10px;
+          align-items: center;
+          font-size: 21px;
+          font-weight: 700;
+
+          @include mq-down('md') {
+            column-gap: 5px;
+            font-size: 16px;
+
+            input {
+              padding-right: 12px;
+              padding-left: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &.acceptance {
+      margin-top: 100px;
+
+      .input-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wpcf7-list-item {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .button-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+
+    .submit {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 412px;
+      height: 94px;
+      cursor: pointer;
+
+      &:has([disabled]) {
+        cursor: no-drop;
+
+        &::before {
+          background: none;
+          background-color: map.get($colors, 'gray');
+        }
+
+        &::after {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: auto;
+          height: auto;
+          font-size: 21px;
+          font-weight: 700;
+          color: map.get($colors, 'white');
+          content: '必須項目を記入してください';
+          background-color: transparent;
+          mask: none;
+        }
+
+        input[type='submit'] {
+          font-size: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        left: 10px;
+        z-index: 1;
+        display: block;
+        content: '';
+        background: map.get($gradients, 'yellow-orange-red');
+        transform: skewX(-15deg);
+
+        @include mq-down('md') {
+          right: 0;
+          left: 0;
+          background: map.get($gradients, 'yellow-orange-red-top');
+          transform: none;
+          transform: rotateX(0deg) rotateY(353deg);
+          transform-style: preserve-3d;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        bottom: 0;
+        z-index: 2;
+        display: inline-block;
+        width: 40px;
+        height: 10px;
+        margin: auto;
+        content: '';
+        background-color: map.get($colors, 'white');
+        mask-image: url('./img/icon/arrow/arrow-line-right.svg');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
+
+      input[type='submit'] {
+        position: relative;
+        z-index: 2;
+        padding: 0;
+        font-size: 27px;
+        font-weight: 700;
+        color: map.get($colors, 'white');
+        background-color: transparent;
+        border: none;
+      }
+
+      .wpcf7-spinner {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.content-event {
+  width: 470px;
+  height: 100%;
+  padding: 20px;
+
+  @include mq-down('md') {
+    width: 78%;
+    padding: 10px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      a {
+        transform: translateY(-20px);
+
+        &::before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          content: '';
+          border: 4px solid map.get($colors, 'main');
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  > a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    box-shadow: 0 3px 20px #0000001a;
+    transition: 0.2s;
+
+    &::after {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      display: block;
+      width: 40px;
+      height: 10px;
+      content: '';
+      background-color: map.get($colors, 'main');
+      mask-image: url('./img/icon/arrow/arrow-line-right.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      opacity: 0;
+      transition: 0.2s;
+    }
+  }
+
+  .eyecatch {
+    display: flex;
+    justify-content: center;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  .content-data {
+    padding: 30px 30px 40px;
+    background-color: map.get($colors, 'white');
+
+    @include mq-down('md') {
+      padding: 20px 20px 30px;
+    }
+  }
+
+  .category {
+    margin-bottom: 30px;
+
+    @include mq-down('md') {
+      margin-bottom: 10px;
+    }
+
+    .event-cat {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        padding: 5px 30px;
+        font-size: 14px;
+        font-weight: 700;
+        color: map.get($colors, 'white');
+        background-color: map.get($colors, 'main');
+        border: 1px solid map.get($colors, 'main');
+
+        @include mq-down('md') {
+          padding: 2px 12px;
+          font-size: 12px;
+        }
+
+        @each $key, $value in $colors {
+          &.cat-color-#{$key} {
+            background-color: $value;
+            border-color: $value;
+
+            @if $key == 'yellow' or $key == 'gray' {
+              color: map.get($colors, 'text-main');
+            }
+
+            @if $key == 'white' {
+              color: map.get($colors, 'main');
+              background-color: map.get($colors, 'white');
+              border-color: map.get($colors, 'main');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .schedule-date {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: map.get($colors, 'main');
+
+    @include mq-down('md') {
+      font-size: 16px;
+    }
+
+    .schedule {
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+      font-size: 29px;
+
+      @include mq-down('md') {
+        margin-right: 0.3em;
+        margin-left: 0.3em;
+        font-size: 21px;
+      }
+    }
+
+    .week {
+      @include mq-down('md') {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .event-title {
+    /* stylelint-disable */
+    display: -webkit-box;
+    /* stylelint-enable */
+    margin-bottom: 30px;
+    overflow: hidden;
+    font-size: 24px;
+    font-weight: 700;
+    color: map.get($colors, 'text-main');
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @include mq-down('md') {
+      font-size: 18px;
+    }
+  }
+
+  .venue {
+    font-size: 15px;
+    font-weight: 700;
+    color: map.get($colors, 'main');
+
+    @include mq-down('md') {
+      font-size: 12px;
+    }
+  }
+}

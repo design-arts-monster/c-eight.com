@@ -2,14 +2,17 @@
 .wp-block-flexible-table-block-table {
   // 情報
   &.is-style-information {
-    padding: 30px 20px;
+    padding: 10px 20px;
     background-color: map.get($colors, 'white');
+    border: 1px solid map.get($colors, 'main');
 
-    @include mq-up(md) {
-      padding: 40px;
+    @include mq-up('md') {
+      padding: 0 40px;
     }
 
     > table {
+      margin-bottom: 0;
+
       tr {
         &:not(:first-of-type) {
           border-top: 1px solid map.get($colors, 'main');
@@ -23,17 +26,20 @@
           background-color: transparent !important;
           border: none !important;
 
-          @include mq-down(md) {
+          @include mq-down('md') {
             display: block;
             padding: 0 !important;
           }
         }
 
         th {
+          width: 250px;
           font-size: 1.125rem !important;
           color: map.get($colors, 'main') !important;
+          text-align: left;
 
-          @include mq-down(md) {
+          @include mq-down('md') {
+            width: auto;
             padding-top: 20px !important;
             padding-bottom: 5px !important;
             font-size: 0.875rem !important;
@@ -43,7 +49,7 @@
         td {
           font-size: 1.3125rem !important;
 
-          @include mq-down(md) {
+          @include mq-down('md') {
             padding-top: 5px !important;
             padding-bottom: 20px !important;
             font-size: 1.125rem !important;
@@ -80,34 +86,33 @@
         td,
         th {
           padding: 30px 40px !important;
+          font-size: 1.3125rem !important;
           font-weight: 700 !important;
           vertical-align: top !important;
           background-color: transparent !important;
           border: none !important;
 
-          @include mq-down(md) {
+          @include mq-down('md') {
             display: block;
             padding: 0 !important;
-            font-size: 1.3125rem !important;
             text-align: center !important;
           }
         }
 
         th {
           position: relative;
-          font-size: 1.125rem !important;
+          width: 250px;
           color: map.get($colors, 'main') !important;
 
-          @include mq-down(md) {
+          @include mq-down('md') {
+            width: auto;
             padding-top: 20px !important;
             padding-bottom: 5px !important;
           }
         }
 
         td {
-          font-size: 1.3125rem !important;
-
-          @include mq-down(md) {
+          @include mq-down('md') {
             padding-top: 5px !important;
             padding-bottom: 20px !important;
           }

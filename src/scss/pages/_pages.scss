@@ -1,0 +1,20 @@
+/* common
+--------------------------------------------- */
+@import 'common';
+
+/* Archive
+--------------------------------------------- */
+@import 'archive/event';
+
+/* pages
+--------------------------------------------- */
+@import 'page/fornt-page';
+@import 'page/about';
+@import 'page/student';
+@import 'page/corporation';
+@import 'page/contact';
+@import 'page/404';
+
+/* post
+--------------------------------------------- */
+@import 'post/single';

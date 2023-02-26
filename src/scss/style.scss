@@ -1,5 +1,5 @@
 /*!
-Theme Name: c-eight
+Theme Name: シーエイト
 Description: c-eight.comで使用するテーマ
 Version: 1.0.0
 Requires PHP: 5.6
@@ -90,6 +90,11 @@ Tags: custom-background, custom-logo, custom-menu, featured-images,
 @import 'components/components';
 
 /* --------------------------------------------------------------
+# Pages
+-------------------------------------------------------------- */
+@import 'pages/pages';
+
+/* --------------------------------------------------------------
 # Plugins
 -------------------------------------------------------------- */
 
@@ -100,6 +105,14 @@ Tags: custom-background, custom-logo, custom-menu, featured-images,
 /* Breadcrumb NavXT
 --------------------------------------------- */
 @import 'plugins/breadcrumb-navxt/breadcrumb-navxt';
+
+/* Slick Slider
+--------------------------------------------- */
+@import 'plugins/slick/slick';
+
+/* Contact Form 7
+--------------------------------------------- */
+@import 'plugins/contact-form-7/contact-form-7';
 
 /* --------------------------------------------------------------
 # Utilities
