@@ -70,7 +70,7 @@
 								<h3 class="mission-item-heading-caption">企業の皆様</h3>
 							</div>
 							<div class="misson-item-content">
-								<p>情熱・努力・熱意（心）・ガッツを備えた<br>人材をご紹介いたします。</p>
+								<p>情熱・努力・熱意（心）・ガッツを備えた<br class="mq-dn-down-md">人材をご紹介いたします。</p>
 							</div>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 						<tbody>
 							<tr>
 								<th>屋号</th>
-								<td>人材採用コンサルティング　シーエイト</td>
+								<td>人材採用コンサルティング　<br class="mq-dn-up-md">シーエイト</td>
 							</tr>
 							<tr>
 								<th>事業内容</th>
@@ -115,7 +115,7 @@
 								<th>住所</th>
 								<td>〒
 									910-0802<br>
-									福井市大和田2丁目511　FUKUビル2E
+									福井市大和田2丁目511　<br class="mq-dn-up-md">FUKUビル2E
 								</td>
 							</tr>
 							<tr>

@@ -259,7 +259,7 @@
 	<div id="faq" class="faq">
 		<div class="faq-wrap">
 			<div class="container">
-				<h2 class="faq-caption">よくあるご質問<span>faq</span></h2>
+				<h2 class="faq-caption">よくあるご質問<span>FAQ</span></h2>
 
 				<?php foreach ($faq as $key => $value) : ?>
 					<div class="faq-item">

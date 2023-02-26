@@ -253,6 +253,10 @@
         .merit-content {
           &:not(:first-of-type) {
             margin-top: 80px;
+
+            @include mq-down('md') {
+              margin-top: 35px;
+            }
           }
 
           &:nth-of-type(even) {
