@@ -66,7 +66,7 @@
 
 				<?php
 				if ($scf && SCF::get('date')) {
-					$timestamp = strtotime(SCF::get('date')));
+					$timestamp = strtotime(SCF::get('date'));
 				} else if ($ppf && do_shortcode('[postexpirator type="date"]')) {
 					// 期限日が設定されている場合は期限日を出力
 					$timestamp =  strtotime(do_shortcode('[postexpirator type="date"]'));
