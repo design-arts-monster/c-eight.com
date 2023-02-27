@@ -65,7 +65,7 @@
 				'order' => 'ASC',
 			)); ?>
 			<?php if ($the_query->have_posts()) :
-				// $has_post = true;
+				$has_post = true;
 			?>
 				<!-- pagination here -->
 

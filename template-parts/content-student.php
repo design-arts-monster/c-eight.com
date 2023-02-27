@@ -82,70 +82,34 @@
 				<div class="career-adviser-content">
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
-							<p class="name">YAMADA<br>TARO</p>
+							<p class="name">HATANAKA<br>YUKI</p>
 							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/man.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
-								<p class="company">株式会社〇〇 代表取締役社長</p>
+								<p class="company">シーエイト　キャリアアドバイザー</p>
 								<div class="name-wrap">
-									<p class="name">山田 太郎</p>
-									<p class="education"><span>〇〇大学出身</span></p>
+									<p class="name">畠中 佑樹</p>
+									<p class="education"><span>東海学園大学出身</span></p>
 								</div>
-								<p class="message">アスリートの皆様の将来への不安を取り除き<br>今、目の前の目標に全力を尽くせる環境を整えます。</p>
+								<p class="message">中央学院高等学校、東海学園大学のサッカー部に所属。大学在学中に東海一部リーグ優勝。<br>
+									東海・北信越選抜に選出。全日本大学選抜に選出。卒業後、ブラウブリッツ秋田、藤枝MYFC、ヴェルスパ大分、福井ユナイテッド FC にてプロサッカー選手として活躍。</p>
 							</div>
 						</div>
 					</div>
 
 					<div class="career-adviser-menber">
 						<div class="career-adviser-menber-image">
-							<p class="name">YAMADA<br>TARO</p>
+							<p class="name">KAWAKAMI<br>RYOKO</p>
 							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/woman.png" alt="">
 						</div>
 						<div class="career-adviser-menber-profile">
 							<div class="profile-wrap">
-								<p class="company">株式会社〇〇 代表取締役社長</p>
+								<p class="company">シーエイト　キャリアアドバイザー</p>
 								<div class="name-wrap">
-									<p class="name">山田 太郎</p>
-									<p class="education"><span>〇〇大学出身</span></p>
+									<p class="name">川上 良子</p>
 								</div>
-								<p class="message">アスリートの皆様の将来への不安を取り除き<br>今、目の前の目標に全力を尽くせる環境を整えます。</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="career-adviser-content">
-					<div class="career-adviser-menber">
-						<div class="career-adviser-menber-image">
-							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/man.png" alt="">
-						</div>
-						<div class="career-adviser-menber-profile">
-							<div class="profile-wrap">
-								<p class="company">株式会社〇〇 代表取締役社長</p>
-								<div class="name-wrap">
-									<p class="name">山田 太郎</p>
-									<p class="education"><span>〇〇大学出身</span></p>
-								</div>
-								<p class="message">アスリートの皆様の将来への不安を取り除き<br>今、目の前の目標に全力を尽くせる環境を整えます。</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="career-adviser-menber">
-						<div class="career-adviser-menber-image">
-							<p class="name">YAMADA<br>TARO</p>
-							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/pages/student/woman.png" alt="">
-						</div>
-						<div class="career-adviser-menber-profile">
-							<div class="profile-wrap">
-								<p class="company">株式会社〇〇 代表取締役社長</p>
-								<div class="name-wrap">
-									<p class="name">山田 太郎</p>
-									<p class="education"><span>〇〇大学出身</span></p>
-								</div>
-								<p class="message">アスリートの皆様の将来への不安を取り除き<br>今、目の前の目標に全力を尽くせる環境を整えます。</p>
+								<p class="message">厳しい競技人生を通して培ったアスリートの持つプロフェッショナルマインドは、どんなビジネス界においても大きな戦力になると思っております。アスリートこそが現代社会に求められる人材であり、私は、全てのアスリートの皆様が次に進むきっかけを全力でお手伝いいたします。</p>
 							</div>
 						</div>
 					</div>
