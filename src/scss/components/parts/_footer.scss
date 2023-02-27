@@ -82,6 +82,10 @@
         align-items: center;
         justify-content: space-between;
         margin: auto;
+
+        a::after {
+          content: none;
+        }
       }
     }
   }
@@ -132,6 +136,10 @@
         background-color: rgb(255 255 255 / 60%);
         border-radius: 999px;
         transition: 0.2s;
+
+        &::after {
+          content: none;
+        }
 
         @media (hover: hover) {
           &:hover {

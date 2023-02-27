@@ -53,8 +53,8 @@ $cat_name = get_category($tax_id)->cat_name;
 					</div>
 				<?php endif; ?>
 			</div>
-			<div class="event-wrap">
 
+			<div class="event-wrap">
 				<?php
 				/* Start the Loop */
 				while (have_posts()) :
@@ -82,6 +82,16 @@ $cat_name = get_category($tax_id)->cat_name;
 				<p><?php esc_html_e('現在表示可能なイベントはありません', 'whitebase'); ?></p>
 			</div>
 		</div>
+		<?php
+		$cat_end = get_category(6);
+		if ($cat_end->count > 0 && $tax_id !== 6) :
+		?>
+			<div class="container">
+				<div class="cat-nav-list-end">
+					<a href="<?php echo esc_url(home_url('/category/') . $cat_end->slug); ?>"><span><?php echo esc_html($cat_end->name); ?>過去のイベント一覧</span></a>
+				</div>
+			</div>
+		<?php endif; ?>
 	<?php endif; ?>
 
 </main><!-- #main -->
