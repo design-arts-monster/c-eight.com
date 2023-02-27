@@ -178,15 +178,6 @@
         content: '';
         background: map.get($gradients, 'yellow-orange-red');
         transform: skewX(-15deg);
-
-        @include mq-down('md') {
-          right: 0;
-          left: 0;
-          background: map.get($gradients, 'yellow-orange-red-top');
-          transform: none;
-          transform: rotateX(0deg) rotateY(353deg);
-          transform-style: preserve-3d;
-        }
       }
 
       &::after {
