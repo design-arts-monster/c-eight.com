@@ -1,13 +1,10 @@
 label {
   &:has(input[type='radio'], input[type='checkbox']) {
     position: relative;
-    display: inline-flex;
-    column-gap: 23px;
-    align-items: flex-start;
-    justify-content: center;
+    padding-left: 53px !important;
 
     @include mq-down('md') {
-      column-gap: 15px;
+      padding-left: 39px !important;
     }
 
     &:has(input[type='radio']) {
@@ -17,6 +14,9 @@ label {
     }
 
     &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
       display: block;
       width: 30px;
       height: 30px;
@@ -36,8 +36,7 @@ label {
 
       &::after {
         position: absolute;
-        top: 0;
-        bottom: 4px;
+        top: 12px;
         left: 5px;
         display: block;
         width: 20px;
