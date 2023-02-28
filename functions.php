@@ -220,7 +220,12 @@ function change_posts_per_page($query) {
 		return;
 	}
 
-	if ($query->is_home()) {
+	if ($query->is_category('6')) {
+		$query->set('meta_key', 'date');
+		$query->set('orderby', 'meta_value');
+		$query->set('order', 'DESC');
+		return;
+	} else if ($query->is_home() || $query->is_category()) {
 		$query->set('meta_key', 'date');
 		$query->set('orderby', 'meta_value');
 		$query->set('order', 'ASC');

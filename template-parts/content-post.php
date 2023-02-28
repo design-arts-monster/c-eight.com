@@ -153,8 +153,8 @@
 							<?php if (SCF::get('schedule')) : ?>
 								<?php foreach (SCF::get('schedule') as $key => $value) : ?>
 									<tr>
-										<th><?php echo nl2br(esc_html($value['time'])); ?></th>
-										<td><?php echo nl2br(esc_html($value['content'])); ?></td>
+										<th><?php echo nl2br(esc_html($value['schedule-time'])); ?></th>
+										<td><?php echo nl2br(esc_html($value['schedule-content'])); ?></td>
 									</tr>
 								<?php endforeach; ?>
 							<?php endif; ?>
