@@ -90,7 +90,7 @@
 								<p class="company">シーエイト　キャリアアドバイザー</p>
 								<div class="name-wrap">
 									<p class="name">畠中 佑樹</p>
-									<p class="education"><span>東海学園大学出身</span></p>
+									<p class="education"><span>スポーツ経歴</span></p>
 								</div>
 								<p class="message">中央学院高等学校、東海学園大学のサッカー部に所属。大学在学中に東海一部リーグ優勝。<br>
 									東海・北信越選抜に選出。全日本大学選抜に選出。卒業後、ブラウブリッツ秋田、藤枝MYFC、ヴェルスパ大分、福井ユナイテッド FC にてプロサッカー選手として活躍。</p>
@@ -108,6 +108,7 @@
 								<p class="company">シーエイト　キャリアアドバイザー</p>
 								<div class="name-wrap">
 									<p class="name">川上 良子</p>
+									<p class="education"><span>私の想い</span></p>
 								</div>
 								<p class="message">厳しい競技人生を通して培ったアスリートの持つプロフェッショナルマインドは、どんなビジネス界においても大きな戦力になると思っております。アスリートこそが現代社会に求められる人材であり、私は、全てのアスリートの皆様が次に進むきっかけを全力でお手伝いいたします。</p>
 							</div>
