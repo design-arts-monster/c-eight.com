@@ -71,11 +71,6 @@ html {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 /* Sections
@@ -143,7 +138,6 @@ a {
 abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  text-decoration: underline dotted;
   border-bottom: none;
 }
 
@@ -249,11 +243,6 @@ button,
   -webkit-appearance: button;
      -moz-appearance: button;
           appearance: button;
-  appearance: button;
-  appearance: button;
-  appearance: button;
-  appearance: button;
-  appearance: button;
 }
 
 /**
@@ -339,11 +328,6 @@ textarea {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
-  appearance: textfield;
-  appearance: textfield;
-  appearance: textfield;
-  appearance: textfield;
-  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -353,7 +337,6 @@ textarea {
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
           appearance: none;
-  appearance: none;
 }
 
 /**
@@ -363,7 +346,6 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
           appearance: button;
-  appearance: button;
   font: inherit;
 }
 
@@ -933,7 +915,6 @@ textarea {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
-  clip-path: inset(50%);
   word-wrap: normal !important;
   border: 0;
 }
@@ -949,7 +930,6 @@ textarea {
   clip: auto !important;
   -webkit-clip-path: none;
           clip-path: none;
-  clip-path: none;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: normal;

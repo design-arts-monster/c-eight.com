@@ -290,3 +290,10 @@ if (is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
 if (is_plugin_active('breadcrumb-navxt/breadcrumb-navxt.php')) {
 	require get_template_directory() . '/inc/breadcrumb-navxt.php';
 }
+
+//お問い合わせフォーム2種類にのみ、リキャプチャを表示
+add_action( 'wp_enqueue_scripts', function() {
+	if(is_page('contact')) return;
+	if(is_page('contact-company')) return;
+    wp_deregister_script( 'google-recaptcha' );
+}, 100, 0);
