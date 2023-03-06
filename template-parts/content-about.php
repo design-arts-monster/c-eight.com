@@ -164,8 +164,8 @@
 							<tr>
 								<th>許可</th>
 								<td>
-									有料職業紹介<br>
-									一般派遣業
+								労働者派遣事業許可番号　<br class="mq-dn-up-md">18-300197<br>
+								有料職業紹介事業許可番号　<br class="mq-dn-up-md">18-ユ-300103
 								</td>
 							</tr>
 						</tbody>
